@@ -655,14 +655,16 @@
             /* Contact section specific styles */
             #contact-section .contact-grid {
                 display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adjusted for better spacing */
                 gap: 1.5em;
                 margin-top: 2em;
             }
 
             #contact-section .contact-item {
                 display: flex;
+                flex-direction: column; /* Stack icon and text */
                 align-items: center;
+                text-align: center;
                 background-color: var(--bg-white);
                 padding: 1.5em;
                 border-radius: 0.75em;
@@ -677,15 +679,15 @@
             }
 
             #contact-section .contact-item .icon {
-                font-size: 2em;
+                font-size: 2.5em; /* Slightly larger icon */
                 color: var(--primary-blue);
-                margin-right: 1em;
+                margin-bottom: 0.5em; /* Space between icon and text */
             }
 
             #contact-section .contact-item .text {
                 font-size: 1.05em;
                 color: var(--text-dark);
-                text-align: left;
+                line-height: 1.4;
             }
 
             #contact-section .contact-item a {
@@ -724,7 +726,7 @@
 									<div class="content">
 										<header>
 											<h1 class="hero-title">Welcome to My Academic Portfolio</h1>
-											<p class="hero-subtitle">Agricultural Biotechnology Graduate & Research Enthusiast</p>
+											<p class="hero-subtitle">Aspiring Graduate Student & Research Enthusiast</p>
 										</header>
 										<p>I am a dedicated researcher with a passion for <strong>Agricultural Biotechnology</strong> and a strong commitment to advancing knowledge through research and innovation. This portfolio showcases my academic journey, research experience, technical skills.</p>
 										<p>My research interests lie at the intersection of <strong>molecular biology</strong> and <strong>biotechnology research</strong>, where I aim to contribute meaningful solutions to real-world challenges through rigorous academic inquiry and practical application.</p>
@@ -937,27 +939,27 @@
                                 </header>
                                 <div class="interests-grid max-w-4xl mx-auto">
                                     <div class="interest-item">
-                                        <img src="https://placehold.co/60x60/215580/FFFFFF?text=Bio" alt="Bioinformatics Icon">
+                                        <img src="https://placehold.co/60x60/215580/FFFFFF?text=Bioinformatics" alt="Bioinformatics Icon">
                                         <span>Bioinformatics</span>
                                     </div>
                                     <div class="interest-item">
-                                        <img src="https://placehold.co/60x60/215580/FFFFFF?text=Stem" alt="Stem Cell Biology Icon">
+                                        <img src="https://placehold.co/60x60/215580/FFFFFF?text=Stem+Cell" alt="Stem Cell Biology Icon">
                                         <span>Stem Cell Biology</span>
                                     </div>
                                     <div class="interest-item">
-                                        <img src="https://placehold.co/60x60/215580/FFFFFF?text=Cell" alt="Cell and Tissue Culture Icon">
+                                        <img src="https://placehold.co/60x60/215580/FFFFFF?text=Tissue+Culture" alt="Cell and Tissue Culture Icon">
                                         <span>Cell and Tissue Culture</span>
                                     </div>
                                     <div class="interest-item">
-                                        <img src="https://placehold.co/60x60/215580/FFFFFF?text=Repro" alt="Reproductive Biotechnology Icon">
+                                        <img src="https://placehold.co/60x60/215580/FFFFFF?text=Reproductive" alt="Reproductive Biotechnology Icon">
                                         <span>Reproductive Biotechnology</span>
                                     </div>
                                     <div class="interest-item">
-                                        <img src="https://placehold.co/60x60/215580/FFFFFF?text=Animal" alt="Animal Science Icon">
+                                        <img src="https://placehold.co/60x60/215580/FFFFFF?text=Animal+Science" alt="Animal Science Icon">
                                         <span>Animal Science</span>
                                     </div>
                                     <div class="interest-item">
-                                        <img src="https://placehold.co/60x60/215580/FFFFFF?text=Stats" alt="Biostatistics Icon">
+                                        <img src="https://placehold.co/60x60/215580/FFFFFF?text=Biostatistics" alt="Biostatistics Icon">
                                         <span>Biostatistics</span>
                                     </div>
                                     <div class="interest-item">
@@ -965,7 +967,7 @@
                                         <span>Genomics</span>
                                     </div>
                                     <div class="interest-item">
-                                        <img src="https://placehold.co/60x60/215580/FFFFFF?text=Agri" alt="Agriculture Icon">
+                                        <img src="https://placehold.co/60x60/215580/FFFFFF?text=Agriculture" alt="Agriculture Icon">
                                         <span>Agriculture</span>
                                     </div>
                                 </div>
