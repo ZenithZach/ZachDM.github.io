@@ -231,13 +231,13 @@
             }
 
             .custom-button:hover {
-                background-color: var(--primary-blue-hover);
+                background-color: var(--primary-blue-hover) !important; /* Added !important */
                 transform: translateY(-3px);
                 box-shadow: 0 0.3em 0.6em rgba(0, 0, 0, 0.2);
             }
 
             .custom-button.secondary { background-color: var(--secondary-gray); }
-            .custom-button.secondary:hover { background-color: var(--secondary-gray-hover); }
+            .custom-button.secondary:hover { background-color: var(--secondary-gray-hover) !important; } /* Added !important */
 
             /* 6. Component: Slideshow & Media */
             .slideshow-container {
@@ -725,8 +725,8 @@
 								<section id="banner" class="scroll-reveal">
 									<div class="content">
 										<header>
-											<h1 class="hero-title">Welcome to My Academic Portfolio</h1>
-											<p class="hero-subtitle">Aspiring Graduate Student & Research Enthusiast</p>
+											<h1 class="hero-title">Daniel Zachary G. del Mundo</h1>
+											<p class="hero-subtitle">Agricultural Biotechnologist & Researcher</p>
 										</header>
 										<p>I am a dedicated researcher with a passion for <strong>Agricultural Biotechnology</strong> and a strong commitment to advancing knowledge through research and innovation. This portfolio showcases my academic journey, research experience, technical skills.</p>
 										<p>My research interests lie at the intersection of <strong>molecular biology</strong> and <strong>biotechnology research</strong>, where I aim to contribute meaningful solutions to real-world challenges through rigorous academic inquiry and practical application.</p>
