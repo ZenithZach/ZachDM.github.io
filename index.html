@@ -116,6 +116,11 @@
                 align-items: center;
                 justify-content: center;
                 flex-wrap: wrap; /* Allow wrapping on smaller screens */
+                background-image: url('https://drive.google.com/file/d/1p-y7fbWpSec1luMpsAzjBv18Fl3ue5ia/preview'); /* Added background image */
+                background-size: cover;
+                background-position: center;
+                color: var(--bg-white); /* Ensure text is visible on background */
+                text-shadow: 0 1px 3px rgba(0,0,0,0.4);
             }
             #banner .content {
                 flex: 1; /* Allow content to grow */
@@ -155,6 +160,17 @@
                     height: 180px;
                 }
             }
+
+            #banner .hero-title, #banner .hero-subtitle, #banner p {
+                color: var(--bg-white); /* Text color for hero section */
+            }
+            #banner .hero-buttons {
+                margin-top: 2.5rem; /* Increased spacing for buttons */
+            }
+            #banner .content p {
+                margin-bottom: 1.5em; /* Increased spacing between paragraphs */
+            }
+
 
             .hero-title {
                 font-size: 3rem;
@@ -317,6 +333,37 @@
             #research-section .posts article ul.actions li {
                 margin-left: 1em;
             }
+            /* New styles for research media grid within the single entry */
+            .research-single-entry-media-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                gap: 1.8em;
+                margin: 2.5em 0;
+            }
+            .research-single-entry-media-item {
+                background-color: var(--bg-white);
+                border-radius: 0.75em;
+                overflow: hidden;
+                box-shadow: 0 0.2em 0.5em rgba(0, 0, 0, 0.08);
+                transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+            }
+            .research-single-entry-media-item:hover {
+                transform: translateY(-6px);
+                box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.18);
+            }
+            .research-single-entry-media-item img {
+                width: 100%;
+                height: 220px;
+                object-fit: cover;
+                display: block;
+            }
+            .research-single-entry-media-caption {
+                padding: 1.2em 1.8em;
+                font-size: 0.95em;
+                color: var(--text-medium);
+                text-align: center;
+            }
+
 
             /* DTRI Slideshow specific styles (retained from previous version) */
             .dtri-slideshow-container {
@@ -419,6 +466,14 @@
                 color: var(--text-dark);
                 font-size: 1.1em;
             }
+            /* Style for interest item images */
+            .interest-item img {
+                width: 60px; /* Adjust size as needed */
+                height: 60px; /* Adjust size as needed */
+                object-fit: contain; /* Ensure image fits without cropping */
+                margin-bottom: 0.6em;
+            }
+
 
             /* 11. Sidebar Theming */
             #sidebar {
@@ -669,9 +724,9 @@
 									<div class="content">
 										<header>
 											<h1 class="hero-title">Welcome to My Academic Portfolio</h1>
-											<p class="hero-subtitle">Aspiring Graduate Student & Research Enthusiast</p>
+											<p class="hero-subtitle">Agricultural Biotechnology Graduate & Research Enthusiast</p>
 										</header>
-										<p>I am a dedicated undergraduate student with a passion for <strong>Agricultural Biotechnology</strong> and a strong commitment to advancing knowledge through research and innovation. This portfolio showcases my academic journey, research experience, technical skills, and demonstrates my readiness for graduate-level studies.</p>
+										<p>I am a dedicated researcher with a passion for <strong>Agricultural Biotechnology</strong> and a strong commitment to advancing knowledge through research and innovation. This portfolio showcases my academic journey, research experience, technical skills.</p>
 										<p>My research interests lie at the intersection of <strong>molecular biology</strong> and <strong>biotechnology research</strong>, where I aim to contribute meaningful solutions to real-world challenges through rigorous academic inquiry and practical application.</p>
 										<ul class="actions">
 											<li><a href="#about-section" class="button big custom-button">Learn More About Me</a></li>
@@ -739,34 +794,40 @@
 									</header>
 									<div class="posts">
 										<article class="card">
-											<span class="image main"><img src="https://drive.google.com/file/d/1Nr2qfC5w0oN5xLRfFuWuHhAmPEZ9MkYm/preview" alt="Research Project 1: Pipetting" /></span>
 											<div class="content">
 												<h3>Undergraduate Thesis Research: A Cost-Effective Papain-Based Cardiomyocyte Tissue Dissociation Protocol for Banaba Philippine Native Chicken Embryos</h3>
 												<p><strong>Advisor:</strong> Percival P. Sangel, DVM, Ph.D.</p>
 												<p>This study addressed a critical gap in avian-specific cell culture by developing and validating a cost-effective protocol for isolating heart muscle cells (cardiomyocytes) from native chicken embryos. The research aimed to find a more efficient and economical alternative to traditional enzymes like trypsin.</p>
 												<p>The results demonstrated that papain, a plant-derived enzyme, is a superior agent for this application. It yielded significantly higher initial cell viability and was the most economical option, paving the way for more accessible and scalable research in avian cardiac biology and genetics.</p>
+                                                
+                                                <h4 class="text-xl font-semibold text-[var(--primary-blue)] mt-8 mb-4 text-center">Research Visuals & Highlights</h4>
+                                                <div class="research-single-entry-media-grid">
+                                                    <div class="research-single-entry-media-item">
+                                                        <img src="https://drive.google.com/file/d/1Nr2qfC5w0oN5xLRfFuWuHhAmPEZ9MkYm/preview" alt="Scientist pipetting liquid into a test tube">
+                                                        <p class="research-single-entry-media-caption">Precision pipetting during cell culture work.</p>
+                                                    </div>
+                                                    <div class="research-single-entry-media-item">
+                                                        <img src="https://drive.google.com/file/d/1DHlxCR__1mUcpvp-JmIwVjNwuD0hRyO_/preview" alt="Petri dishes being handled in a sterile laminar flow hood">
+                                                        <p class="research-single-entry-media-caption">Cultivating cell samples in a sterile environment.</p>
+                                                    </div>
+                                                </div>
+
                                                 <div class="chart-container mb-6">
                                                     <canvas id="viabilityChart"></canvas>
                                                 </div>
                                                 <p class="caption-text">Comparison of Enzyme Effectiveness on Cardiomyocyte Viability</p>
+
+                                                <h4 class="text-xl font-semibold text-[var(--primary-blue)] mb-2">Broader Impact</h4>
+                                                <p class="text-[var(--text-dark)]">This research provides a foundational tool for advancements in:</p>
+                                                <ul class="list-disc list-inside text-[var(--text-dark)] mt-2 space-y-1">
+                                                    <li><b>Biomedical Research:</b> Improving models for cardiac physiology and disease.</li>
+                                                    <li><b>Animal Biotechnology:</b> Facilitating genetic engineering and trait enhancement in poultry.</li>
+                                                    <li><b>Conservation Biology:</b> Aiding genetic conservation of indigenous breeds.</li>
+                                                </ul>
+                                                <p class="mt-4">My research was generously funded by the Agricultural and Rural Development Scholarship (ARDS) – Accelerating Growth through One Research and Extension in Action (AGORA) Thesis/Dissertation Grant.</p>
+
 												<ul class="actions">
 													<li><a href="https://drive.google.com/drive/folders/1-UtQ_RMvIdHH82CefUNGEogQCXeW-Ciy?usp=sharing" target="_blank" class="button custom-button">View Research Abstracts</a></li>
-												</ul>
-											</div>
-										</article>
-										<article class="card">
-											<span class="image main"><img src="https://drive.google.com/file/d/1DHlxCR__1mUcpvp-JmIwVjNwuD0hRyO_/preview" alt="Research Project 2: Petri Dishes" /></span>
-											<div class="content">
-												<h3>Broader Impact of My Thesis</h3>
-												<p>This research provides a foundational tool for advancements in:</p>
-												<ul class="list-disc list-inside text-[var(--text-dark)] mt-2 space-y-1">
-													<li><b>Biomedical Research:</b> Improving models for cardiac physiology and disease.</li>
-													<li><b>Animal Biotechnology:</b> Facilitating genetic engineering and trait enhancement in poultry.</li>
-													<li><b>Conservation Biology:</b> Aiding genetic conservation of indigenous breeds.</li>
-												</ul>
-												<p class="mt-4">My research was generously funded by the Agricultural and Rural Development Scholarship (ARDS) – Accelerating Growth through One Research and Extension in Action (AGORA) Thesis/Dissertation Grant.</p>
-												<ul class="actions">
-													<li><a href="https://drive.google.com/drive/folders/1-UtQ_RMvIdHH82CefUNGEogQCXeW-Ciy?usp=sharing" target="_blank" class="button custom-button secondary">Read More</a></li>
 												</ul>
 											</div>
 										</article>
@@ -876,35 +937,35 @@
                                 </header>
                                 <div class="interests-grid max-w-4xl mx-auto">
                                     <div class="interest-item">
-                                        <i class="fas fa-laptop-code icon"></i>
+                                        <img src="https://placehold.co/60x60/215580/FFFFFF?text=Bio" alt="Bioinformatics Icon">
                                         <span>Bioinformatics</span>
                                     </div>
                                     <div class="interest-item">
-                                        <i class="fas fa-vial icon"></i>
+                                        <img src="https://placehold.co/60x60/215580/FFFFFF?text=Stem" alt="Stem Cell Biology Icon">
                                         <span>Stem Cell Biology</span>
                                     </div>
                                     <div class="interest-item">
-                                        <i class="fas fa-flask icon"></i>
+                                        <img src="https://placehold.co/60x60/215580/FFFFFF?text=Cell" alt="Cell and Tissue Culture Icon">
                                         <span>Cell and Tissue Culture</span>
                                     </div>
                                     <div class="interest-item">
-                                        <i class="fas fa-egg icon"></i>
+                                        <img src="https://placehold.co/60x60/215580/FFFFFF?text=Repro" alt="Reproductive Biotechnology Icon">
                                         <span>Reproductive Biotechnology</span>
                                     </div>
                                     <div class="interest-item">
-                                        <i class="fas fa-paw icon"></i>
+                                        <img src="https://placehold.co/60x60/215580/FFFFFF?text=Animal" alt="Animal Science Icon">
                                         <span>Animal Science</span>
                                     </div>
                                     <div class="interest-item">
-                                        <i class="fas fa-chart-line icon"></i>
+                                        <img src="https://placehold.co/60x60/215580/FFFFFF?text=Stats" alt="Biostatistics Icon">
                                         <span>Biostatistics</span>
                                     </div>
                                     <div class="interest-item">
-                                        <i class="fas fa-dna icon"></i>
+                                        <img src="https://placehold.co/60x60/215580/FFFFFF?text=Genomics" alt="Genomics Icon">
                                         <span>Genomics</span>
                                     </div>
                                     <div class="interest-item">
-                                        <i class="fas fa-tractor icon"></i>
+                                        <img src="https://placehold.co/60x60/215580/FFFFFF?text=Agri" alt="Agriculture Icon">
                                         <span>Agriculture</span>
                                     </div>
                                 </div>
@@ -1144,12 +1205,7 @@
 											<strong>Graduation:</strong> Cum Laude<br>
 											<strong>High Honors:</strong> STEM Strand</p>
 										</article>
-										<article>
-											<h4>Research Output</h4>
-											<p><strong>Thesis:</strong> Cost-Effective Cardiomyocyte Protocol<br>
-											<strong>Key Finding:</strong> Papain Superior Viability<br>
-											<strong>Funding:</strong> DA-UPLB AGORA Grant</p>
-										</article>
+										<!-- Removed Research Output as requested -->
 										<article>
 											<h4>Skills Summary</h4>
 											<p><strong>Molecular & Cell Bio:</strong> Proficient<br>
