@@ -1,606 +1,17 @@
 <!DOCTYPE HTML>
+<!--
+	Personal Academic Portfolio
+	Based on Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
 <html>
 	<head>
-		<title>Daniel Zachary G. del Mundo | Agricultural Biotechnology</title>
+		<title>Your Name - Academic Portfolio</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		
-        <!-- HTML5 UP Editorial Template CSS -->
+		<meta name="description" content="Professional academic portfolio showcasing research experience, skills, and academic achievements for graduate school applications." />
 		<link rel="stylesheet" href="assets/css/main.css" />
-        <!-- Font Awesome for icons (from template) -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-
-        <!-- Tailwind CSS CDN for custom styling and overrides -->
-        <script src="https://cdn.tailwindcss.com"></script>
-        <!-- Chart.js CDN -->
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-        <!-- Google Fonts (Inter) - Combined with template's existing font imports -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Roboto+Slab:wght@700&family=Open+Sans:wght@400&display=swap" rel="stylesheet">
-
-        <style>
-            /* 1. CSS Variables & Global Styles */
-            :root {
-                --primary-blue: #215580;
-                --primary-blue-hover: #2A6A99;
-                --secondary-gray: #6C757D;
-                --secondary-gray-hover: #889098;
-                --text-dark: #333333;
-                --text-medium: #666666;
-                --bg-light-gray: #F5F8FA;
-                --bg-white: #FFFFFF;
-                --border-light: #E0E0E0;
-                --font-body: 'Inter', sans-serif;
-                --font-heading: 'Roboto Slab', serif;
-                --font-open-sans: 'Open Sans', sans-serif;
-            }
-
-            body {
-                font-family: var(--font-body);
-                background-color: var(--bg-white);
-                color: var(--text-dark);
-            }
-
-            p {
-                line-height: 1.8;
-                margin-bottom: 1.35em;
-                color: var(--text-dark);
-                font-size: 1.05em;
-                text-align: justify; /* Justify body text */
-            }
-            
-            h1, h2, h3, h4, h5, h6 {
-                font-family: var(--font-heading);
-                color: var(--primary-blue);
-            }
-            
-            ul.list-disc {
-                list-style-position: inside;
-                list-style-type: disc;
-                margin-top: 1em;
-            }
-
-            ul.list-disc li {
-                margin-bottom: 0.6em;
-            }
-
-            #header .logo strong {
-                font-family: var(--font-body);
-                color: var(--primary-blue);
-            }
-
-            hr.major {
-                border-top: solid 2px var(--border-light);
-                margin: 3rem 0;
-            }
-
-            /* 2. Section & Layout */
-            #main .inner {
-                padding: 3em 3em 1em 3em;
-            }
-            @media screen and (max-width: 736px) {
-                #main .inner { padding: 2.5em 2.5em 1em 2.5em; }
-            }
-
-            .section-title {
-                font-size: 2.8em;
-                margin-bottom: 0.8em;
-                text-align: center;
-            }
-
-            .section-subtitle {
-                font-family: var(--font-open-sans);
-                font-size: 1.2em;
-                color: var(--text-medium);
-                margin-bottom: 3em;
-                text-align: center;
-            }
-
-            #home, #research, #interests, #documents, #contact-section { background-color: var(--bg-white); }
-            #about, #skills, #experience { background-color: var(--bg-light-gray); }
-            
-            section {
-                padding: 4em 0;
-            }
-
-            /* 3. Component: Hero Section */
-            #home {
-                position: relative;
-                overflow: hidden;
-                padding: 5em 2em;
-                text-align: center;
-                border-radius: 0.75em;
-            }
-
-            .hero-background {
-                position: absolute;
-                top: 0; left: 0;
-                width: 100%; height: 100%;
-                background-image: url('https://drive.google.com/file/d/1p-y7fbWpSec1luMpsAzjBv18Fl3ue5ia/preview'); 
-                background-size: cover;
-                background-position: center;
-                filter: brightness(0.5) grayscale(0.3) saturate(1.2); /* Adjusted for better contrast */
-                border-radius: 0.75em; /* Match card rounding */
-                z-index: 1;
-            }
-
-            .hero-content {
-                position: relative;
-                z-index: 5;
-                color: var(--bg-white);
-                text-shadow: 0 1px 3px rgba(0,0,0,0.4);
-            }
-
-            .hero-profile-pic {
-                border-radius: 50%;
-                margin: 0 auto 2rem auto;
-                width: 200px;
-                height: 200px;
-                object-fit: cover;
-                border: 6px solid var(--bg-white);
-                box-shadow: 0 0 1.5em rgba(0, 0, 0, 0.25);
-            }
-
-            .hero-title {
-                font-size: 3rem;
-                font-weight: 800;
-                color: var(--bg-white);
-            }
-
-            .hero-subtitle {
-                margin-top: 1rem;
-                font-size: 1.25rem;
-                max-width: 45rem;
-                margin-left: auto;
-                margin-right: auto;
-                color: var(--bg-white);
-            }
-            
-            .hero-buttons {
-                margin-top: 2rem;
-                display: flex;
-                justify-content: center;
-                gap: 1.5rem;
-                flex-wrap: wrap;
-            }
-
-            /* 4. Component: Cards */
-            .card {
-                background-color: var(--bg-white);
-                padding: 2.5em;
-                border-radius: 0.75em;
-                box-shadow: 0 0.35em 0.8em rgba(0, 0, 0, 0.08);
-                border: 1px solid var(--border-light);
-                transition: all 0.3s ease-in-out;
-            }
-
-            .card:hover {
-                box-shadow: 0 0.6em 1.2em rgba(0, 0, 0, 0.15);
-                border-color: var(--primary-blue);
-                transform: translateY(-5px);
-            }
-
-            /* 5. Component: Buttons */
-            .custom-button {
-                display: inline-flex;
-                align-items: center;
-                justify-content: center;
-                background-color: var(--primary-blue);
-                color: var(--bg-white) !important;
-                text-decoration: none;
-                padding: 1em 2.2em;
-                border-radius: 0.5em;
-                font-weight: 600;
-                letter-spacing: 0.06em;
-                text-transform: uppercase;
-                transition: all 0.2s ease-in-out;
-                border: none;
-                cursor: pointer;
-                box-shadow: 0 0.15em 0.3em rgba(0, 0, 0, 0.1);
-            }
-
-            .custom-button:hover {
-                background-color: var(--primary-blue-hover);
-                transform: translateY(-3px);
-                box-shadow: 0 0.3em 0.6em rgba(0, 0, 0, 0.2);
-            }
-
-            .custom-button.secondary { background-color: var(--secondary-gray); }
-            .custom-button.secondary:hover { background-color: var(--secondary-gray-hover); }
-
-            /* 6. Component: Slideshow & Media */
-            .slideshow-container {
-                position: relative;
-                max-width: 850px;
-                margin: 2.5em auto; /* Adjusted spacing */
-                overflow: hidden;
-                border-radius: 0.75em;
-                box-shadow: 0 0.3em 0.6em rgba(0, 0, 0, 0.1);
-            }
-
-            .about-slide {
-                display: none;
-                width: 100%;
-                height: 450px;
-                object-fit: cover;
-                animation: fadeEffect 1s;
-            }
-            .about-slide.active { display: block; }
-            @keyframes fadeEffect { from {opacity: .4} to {opacity: 1} }
-
-            .caption-text {
-                font-size: 0.9em;
-                text-align: center;
-                color: var(--text-medium);
-                margin-top: 1.0rem; /* Adjusted spacing */
-                margin-bottom: 0.5rem; /* Adjusted spacing */
-            }
-
-            .video-container {
-                position: relative;
-                width: 100%;
-                padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-                height: 0;
-                overflow: hidden;
-                border-radius: 0.5em;
-                box-shadow: 0 0.15em 0.3em rgba(0, 0, 0, 0.08);
-                background-color: #000;
-            }
-
-            .video-container iframe {
-                position: absolute;
-                top: 0; left: 0;
-                width: 100%; height: 100%;
-                border: 0;
-            }
-            
-            /* 7. Component: Research Media Grid */
-            .research-media-grid {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-                gap: 1.8em;
-                margin: 2.5em 0;
-            }
-
-            .research-media-item {
-                background-color: var(--bg-white);
-                border-radius: 0.75em;
-                overflow: hidden;
-                box-shadow: 0 0.2em 0.5em rgba(0, 0, 0, 0.08);
-                transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-            }
-            .research-media-item:hover {
-                transform: translateY(-6px);
-                box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.18);
-            }
-            .research-media-item img { width: 100%; height: 220px; object-fit: cover; display: block; }
-            .research-media-caption { padding: 1.2em 1.8em; font-size: 0.95em; color: var(--text-medium); text-align: center; }
-
-            /* DTRI Slideshow specific styles (retained from previous version) */
-            .dtri-slideshow-container {
-                position: relative;
-                max-width: 750px; /* Slightly wider */
-                margin: 2.5em auto;
-                overflow: hidden;
-                border-radius: 0.75em;
-                box-shadow: 0 0.3em 0.6em rgba(0, 0, 0, 0.1);
-            }
-            .dtri-slide {
-                display: none; 
-                width: 100%;
-                height: 450px; /* Taller for consistency */
-                object-fit: cover; 
-                transition: opacity 1s ease-in-out;
-                opacity: 0;
-            }
-            .dtri-slide.active {
-                display: block;
-                opacity: 1;
-            }
-            .dtri-slide-overlay {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background: rgba(0,0,0,0.05);
-                pointer-events: none;
-            }
-
-            /* 8. Component: Charts */
-            .chart-container {
-                position: relative;
-                width: 100%;
-                max-width: 600px;
-                margin: 2em auto;
-                height: 350px;
-            }
-
-            /* 9. Component: Experience Tabs */
-            .tabs-container {
-                display: flex;
-                justify-content: center;
-                border-bottom: 2px solid var(--border-light);
-                margin-bottom: 2em;
-                flex-wrap: wrap;
-            }
-            .experience-tab {
-                padding: 0.8em 1.6em;
-                font-weight: 600;
-                color: var(--text-medium);
-                border-bottom: solid 3px transparent;
-                cursor: pointer;
-                transition: all 0.2s ease-in-out;
-                font-size: 1.1em;
-                background: none;
-                border-top: none;
-                border-left: none;
-                border-right: none;
-            }
-            .experience-tab.active, .experience-tab:hover {
-                color: var(--primary-blue);
-                border-bottom-color: var(--primary-blue);
-            }
-            .tab-content { display: none !important; } /* Added !important for robustness */
-            .tab-content.active { display: block !important; animation: fadeEffect 0.5s; } /* Added !important for robustness */
-
-            /* 10. Component: Interests */
-            .interests-grid {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-                gap: 1.8em;
-                margin-top: 2.5em;
-            }
-            .interest-item {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                text-align: center;
-                padding: 2em 1em;
-                background-color: var(--bg-white);
-                border-radius: 0.75em;
-                box-shadow: 0 0.2em 0.5em rgba(0, 0, 0, 0.08);
-                transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-            }
-            .interest-item:hover {
-                transform: translateY(-6px);
-                box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.18);
-            }
-            .interest-item .icon {
-                font-size: 3em;
-                color: var(--primary-blue);
-                margin-bottom: 0.6em;
-            }
-            .interest-item span {
-                font-weight: 600;
-                color: var(--text-dark);
-                font-size: 1.1em;
-            }
-
-            /* 11. Sidebar Theming */
-            #sidebar {
-                background-color: var(--bg-light-gray);
-                border-right: 1px solid var(--border-light);
-            }
-            #sidebar .inner {
-                display: flex;
-                flex-direction: column;
-                height: 100%;
-            }
-            #sidebar header.major h2, #sidebar h2 { color: var(--primary-blue); }
-            #sidebar #menu ul a, #sidebar .contact li, #sidebar .contact a {
-                color: var(--text-medium);
-                border-bottom-color: rgba(224, 224, 224, 0.5);
-            }
-            /* Corrected hover colors for sidebar links */
-            #sidebar #menu ul a:hover, #sidebar .contact a:hover { 
-                color: var(--primary-blue) !important; 
-                background: none !important; /* Ensure no background change on hover */
-            }
-            #sidebar #menu ul a.active { color: var(--primary-blue) !important; font-weight: 700; }
-            #sidebar .icons li a { color: var(--text-medium); }
-            /* Corrected hover colors for sidebar icons */
-            #sidebar .icons li a:hover, #header .icons li a:hover { color: var(--primary-blue) !important; }
-            #menu ul a.opener:before, #menu ul span.opener:before { 
-                color: var(--text-medium); 
-                /* Override default red color from main.css */
-                content: '\f078' !important; /* Ensure correct icon is used */
-                font-family: 'Font Awesome 5 Free' !important; /* Ensure correct font family */
-                font-weight: 900 !important; /* Ensure correct font weight */
-            }
-            #menu ul a.opener:hover:before, #menu ul a.active:before { color: var(--primary-blue); }
-            /* Remove any red border or background from sidebar */
-            #sidebar,
-            #sidebar .inner,
-            #sidebar header.major h2,
-            #sidebar h2 {
-                background: var(--bg-light-gray);
-                border-right: 1px solid var(--border-light);
-                color: var(--primary-blue);
-            }
-            #sidebar footer {
-                margin-top: auto; /* Pushes footer to bottom */
-                border-top: 2px solid var(--border-light);
-                padding-top: 2em;
-            }
-
-            /* 12. Animations */
-            .scroll-reveal {
-                opacity: 0;
-                transform: translateY(25px);
-                transition: opacity 0.7s ease-out, transform 0.7s ease-out;
-                will-change: opacity, transform;
-            }
-            .scroll-reveal.active {
-                opacity: 1;
-                transform: translateY(0);
-            }
-
-            /* Fix for the top red line from original template's main.css */
-            body:before {
-                background: none !important; /* Remove any default red background */
-            }
-            #wrapper {
-                border-top: none !important; /* Remove any default red border */
-            }
-
-            /* New styles for Skills & Certifications section */
-            .skills-grid {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-                gap: 1.5em;
-                margin-bottom: 2em;
-            }
-
-            .skill-card {
-                background-color: var(--bg-white);
-                padding: 1.8em;
-                border-radius: 0.75em;
-                box-shadow: 0 0.2em 0.5em rgba(0, 0, 0, 0.08);
-                border: 1px solid var(--border-light);
-                transition: all 0.3s ease-in-out;
-                height: 100%; /* Ensure cards have equal height */
-                display: flex;
-                flex-direction: column;
-            }
-
-            .skill-card:hover {
-                box-shadow: 0 0.4em 0.8em rgba(0, 0, 0, 0.12);
-                border-color: var(--primary-blue);
-                transform: translateY(-3px);
-            }
-
-            .skill-card h3 {
-                margin-bottom: 0.8em;
-                color: var(--primary-blue);
-                font-size: 1.25em;
-            }
-
-            .skill-card p, .skill-card ul {
-                font-size: 0.95em;
-                color: var(--text-dark);
-                line-height: 1.6;
-                text-align: left; /* Keep skill lists left-aligned */
-            }
-
-            .skill-card ul {
-                list-style-type: none; /* Remove default list bullets */
-                padding-left: 0;
-                margin-top: 0.5em;
-            }
-
-            .skill-card ul li {
-                margin-bottom: 0.4em;
-                display: flex;
-                align-items: flex-start;
-            }
-
-            .skill-card ul li i {
-                margin-right: 0.6em;
-                color: var(--primary-blue);
-                font-size: 1.1em;
-                flex-shrink: 0;
-                margin-top: 0.2em; /* Align icon with text */
-            }
-
-            .certifications-list {
-                margin-top: 2em;
-                padding-top: 2em;
-                border-top: 1px solid var(--border-light);
-            }
-
-            .certifications-list h3 {
-                text-align: center;
-                margin-bottom: 1.5em;
-            }
-
-            .certifications-list .certification-item {
-                display: flex;
-                align-items: flex-start;
-                margin-bottom: 1.2em;
-                background-color: var(--bg-white);
-                padding: 1.5em;
-                border-radius: 0.75em;
-                box-shadow: 0 0.15em 0.3em rgba(0, 0, 0, 0.05);
-                border: 1px solid var(--border-light);
-            }
-
-            .certifications-list .certification-item i {
-                font-size: 1.8em;
-                color: var(--primary-blue);
-                margin-right: 1em;
-                flex-shrink: 0;
-            }
-
-            .certifications-list .certification-item .details {
-                flex-grow: 1;
-            }
-
-            .certifications-list .certification-item .details p {
-                margin-bottom: 0.2em;
-                text-align: left; /* Keep certification details left-aligned */
-            }
-
-            .certifications-list .certification-item .details .cert-name {
-                font-weight: 600;
-                color: var(--text-dark);
-                font-size: 1.05em;
-            }
-
-            .certifications-list .certification-item .details .cert-info {
-                font-size: 0.9em;
-                color: var(--text-medium);
-            }
-
-            /* Contact section specific styles */
-            #contact-section .contact-grid {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-                gap: 1.5em;
-                margin-top: 2em;
-            }
-
-            #contact-section .contact-item {
-                display: flex;
-                align-items: center;
-                background-color: var(--bg-white);
-                padding: 1.5em;
-                border-radius: 0.75em;
-                box-shadow: 0 0.15em 0.3em rgba(0, 0, 0, 0.05);
-                border: 1px solid var(--border-light);
-                transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-            }
-
-            #contact-section .contact-item:hover {
-                transform: translateY(-3px);
-                box-shadow: 0 0.3em 0.6em rgba(0, 0, 0, 0.1);
-            }
-
-            #contact-section .contact-item .icon {
-                font-size: 2em;
-                color: var(--primary-blue);
-                margin-right: 1em;
-            }
-
-            #contact-section .contact-item .text {
-                font-size: 1.05em;
-                color: var(--text-dark);
-                text-align: left;
-            }
-
-            #contact-section .contact-item a {
-                color: var(--primary-blue);
-                text-decoration: none;
-                font-weight: 600;
-            }
-
-            #contact-section .contact-item a:hover {
-                text-decoration: underline;
-            }
-        </style>
 	</head>
 	<body class="is-preload">
 
@@ -613,436 +24,246 @@
 
 							<!-- Header -->
 								<header id="header">
-									<a href="index.html" class="logo"><strong>Daniel Zachary G. del Mundo</strong></a>
+									<a href="index.html" class="logo"><strong>Your Name</strong> Academic Portfolio</a>
 									<ul class="icons">
-										<li><a href="https://www.facebook.com/dzgdelmundo" class="icon brands fa-facebook-f" target="_blank" aria-label="Facebook"><span class="label">Facebook</span></a></li>
-										<li><a href="https://linkedin.com/in/dzgdelmundo/" class="icon brands fa-linkedin-in" target="_blank" aria-label="LinkedIn"><span class="label">LinkedIn</span></a></li>
+										<li><a href="#" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+										<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+										<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+										<li><a href="#" class="icon brands fa-orcid"><span class="label">ORCID</span></a></li>
+										<li><a href="#" class="icon brands fa-researchgate"><span class="label">ResearchGate</span></a></li>
 									</ul>
 								</header>
 
-							<!-- Content from your SPA starts here -->
-                            <section id="home" class="scroll-reveal">
-                                <div class="hero-background"></div>
-                                <div class="hero-content">
-                                    <img src="del Mundo_ID Picture.png" alt="Daniel Zachary G. del Mundo Profile Picture" class="hero-profile-pic">
-                                    <h1 class="hero-title">Daniel Zachary G. del Mundo</h1>
-                                    <p class="hero-subtitle">
-                                        A results-driven Agricultural Biotechnology graduate from UP Los Baños specializing in molecular biology and biotechnology research. An effective communicator and project leader advocating for agricultural innovation and social progress.
-                                    </p>
-                                    <div class="hero-buttons">
-                                        <a href="#research" class="custom-button" aria-label="Explore My Research">Explore My Research</a>
-                                        <a href="#contact-section" class="custom-button secondary" aria-label="Get In Touch">Get In Touch</a>
-                                    </div>
-                                </div>
-                            </section>
+							<!-- Banner -->
+								<section id="banner">
+									<div class="content">
+										<header>
+											<h1>Welcome to My Academic Portfolio</h1>
+											<p>Aspiring Graduate Student & Research Enthusiast</p>
+										</header>
+										<p>I am a dedicated undergraduate student with a passion for <strong>[Your Field of Study]</strong> and a strong commitment to advancing knowledge through research and innovation. This portfolio showcases my academic journey, research experience, technical skills, and demonstrates my readiness for graduate-level studies.</p>
+										<p>My research interests lie at the intersection of <strong>[Research Area 1]</strong> and <strong>[Research Area 2]</strong>, where I aim to contribute meaningful solutions to real-world challenges through rigorous academic inquiry and practical application.</p>
+										<ul class="actions">
+											<li><a href="#about" class="button big">Learn More About Me</a></li>
+											<li><a href="#contact" class="button big primary">Get In Touch</a></li>
+										</ul>
+									</div>
+									<span class="image object">
+										<img src="images/pic10.jpg" alt="Professional headshot" />
+									</span>
+								</section>
 
-                            <hr class="major" />
+							<!-- Section: About Me -->
+								<section id="about">
+									<header class="major">
+										<h2>About Me</h2>
+									</header>
+									<div class="row">
+										<div class="col-6 col-12-small">
+											<h3>Academic Background</h3>
+											<p><strong>Bachelor of Science in [Your Major]</strong><br>
+											[University Name], Expected Graduation: [Date]<br>
+											Current GPA: [Your GPA]/4.0<br>
+											Relevant Coursework: Advanced Mathematics, Research Methods, Data Analysis, [Other Relevant Courses]</p>
+											
+											<h3>Research Philosophy</h3>
+											<p>I believe in the power of interdisciplinary research to solve complex problems. My approach combines theoretical knowledge with practical application, always seeking to bridge the gap between academic research and real-world impact.</p>
+										</div>
+										<div class="col-6 col-12-small">
+											<h3>Academic Achievements</h3>
+											<ul>
+												<li>Dean's List: [Semesters/Years]</li>
+												<li>[Academic Honor/Award Name] - [Year]</li>
+												<li>[Scholarship Name] Recipient - [Year]</li>
+												<li>Undergraduate Research Grant - [Amount] - [Year]</li>
+												<li>[Other relevant achievements]</li>
+											</ul>
+											
+											<h3>Future Goals</h3>
+											<p>I am seeking to pursue a Master's degree in <strong>[Target Program]</strong> to deepen my expertise and contribute to cutting-edge research in [specific area]. My long-term goal is to [career objective].</p>
+										</div>
+									</div>
+								</section>
 
-                            <section id="about" class="scroll-reveal">
-                                <header class="main">
-                                    <h2 class="section-title">About Me</h2>
-                                    <p class="section-subtitle">Driven by curiosity and a commitment to meaningful impact.</p>
-                                </header>
-                                <div class="card text-left max-w-4xl mx-auto">
-                                    <p class="text-lg text-[var(--text-dark)] leading-relaxed mb-6">
-                                        Born with a passion for science and innovation, my journey led me to the University of the Philippines Los Baños to pursue a Bachelor of Science in Agricultural Biotechnology. I was drawn to its unique fusion of science, technology, and agriculture, fields I believe are key to solving critical global and local challenges.
-                                    </p>
-                                    <p class="text-lg text-[var(--text-dark)] leading-relaxed">
-                                        Throughout my time at UPLB, I have been a consistent academic achiever and an active student leader. My goal is to use my knowledge and experiences not only to excel professionally but to contribute meaningfully to my family, my community, and the greater good. I am deeply committed to leveraging biotechnology for a more sustainable and equitable future.
-                                    </p>
-                                    
-                                    <div class="slideshow-container">
-                                        <!-- Videos now include autoplay, muted, and loop attributes -->
-                                        <div class="about-slide video-container active">
-                                            <iframe src="https://drive.google.com/file/d/17XVWeEKsWG_lQFlqMz9aQuI_9B-1xHQ_/preview" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen autoplay muted loop title="Academic Journey Video 1"></iframe>
-                                        </div>
-                                        <img class="about-slide" src="https://drive.google.com/file/d/14dvRvLkrC7MKMT5SzSlIjkvI565-7TVb/preview" alt="Daniel Zachary G. del Mundo in a lab coat">
-                                        <img class="about-slide" src="https://drive.google.com/file/d/1ZItMmurAwwihMgpoNGIniBBnWyIfFr_K/preview" alt="Daniel Zachary G. del Mundo presenting">
-                                        <img class="about-slide" src="https://drive.google.com/file/d/1K-s4DcP6WkeZjOsWAtAePcrk9GvefAbA/preview" alt="Daniel Zachary G. del Mundo outdoors, looking up">
-                                        <div class="about-slide video-container">
-                                            <iframe src="https://drive.google.com/file/d/16hCOTIlVtznNKR9CJpaUYY_g3jFswsRI/preview" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen autoplay muted loop title="Academic Journey Video 2"></iframe>
-                                        </div>
-                                        <img class="about-slide" src="https://drive.google.com/file/d/1JzFjuJQ5gNB8kVgVAMk0R_G2BqaP9A05/preview" alt="Daniel Zachary G. del Mundo with a group">
-                                        <img class="about-slide" src="https://drive.google.com/file/d/17X4zQ_ZUfi30PLpzOTW9mT_t2hKAkggD/preview" alt="Group photo on campus, possibly during an event">
-                                        <div class="about-slide-overlay"></div>
-                                    </div>
-                                    <p class="caption-text">A glimpse into my academic journey and passions.</p>
-                                </div>
-                            </section>
+							<!-- Section: Research Experience -->
+								<section>
+									<header class="major">
+										<h2>Research Experience</h2>
+									</header>
+									<div class="posts">
+										<article>
+											<a href="#" class="image"><img src="images/pic01.jpg" alt="Research Project 1" /></a>
+											<h3>Undergraduate Research Project</h3>
+											<p><strong>Research Title:</strong> [Your Research Project Title]<br>
+											<strong>Supervisor:</strong> Dr. [Supervisor Name]<br>
+											<strong>Duration:</strong> [Start Date] - [End Date]</p>
+											<p>Brief description of your research project, methodology used, key findings, and impact. Highlight any publications, presentations, or awards resulting from this work.</p>
+											<ul class="actions">
+												<li><a href="#" class="button">View Details</a></li>
+											</ul>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/pic02.jpg" alt="Research Project 2" /></a>
+											<h3>Independent Study Project</h3>
+											<p><strong>Project Focus:</strong> [Project Title/Area]<br>
+											<strong>Advisor:</strong> Prof. [Advisor Name]<br>
+											<strong>Duration:</strong> [Start Date] - [End Date]</p>
+											<p>Description of your independent research, including objectives, methodology, results, and conclusions. Emphasize skills developed and knowledge gained.</p>
+											<ul class="actions">
+												<li><a href="#" class="button">View Details</a></li>
+											</ul>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/pic03.jpg" alt="Lab Experience" /></a>
+											<h3>Laboratory Research Assistant</h3>
+											<p><strong>Laboratory:</strong> [Lab Name]<br>
+											<strong>Principal Investigator:</strong> Dr. [PI Name]<br>
+											<strong>Duration:</strong> [Start Date] - [End Date]</p>
+											<p>Describe your role as a research assistant, specific techniques learned, contributions to ongoing projects, and any collaborative work with graduate students or postdocs.</p>
+											<ul class="actions">
+												<li><a href="#" class="button">View Details</a></li>
+											</ul>
+										</article>
+									</div>
+								</section>
 
-                            <hr class="major" />
+							<!-- Section: Technical Skills -->
+								<section>
+									<header class="major">
+										<h2>Technical Skills & Competencies</h2>
+									</header>
+									<div class="features">
+										<article>
+											<span class="icon solid fa-code"></span>
+											<div class="content">
+												<h3>Programming & Software</h3>
+												<p><strong>Languages:</strong> Python, R, MATLAB, Java, C++<br>
+												<strong>Software:</strong> SPSS, SAS, Tableau, Adobe Creative Suite<br>
+												<strong>Platforms:</strong> Git/GitHub, Linux, Windows, macOS</p>
+											</div>
+										</article>
+										<article>
+											<span class="icon solid fa-chart-bar"></span>
+											<div class="content">
+												<h3>Data Analysis & Statistics</h3>
+												<p><strong>Statistical Methods:</strong> Regression Analysis, ANOVA, Machine Learning<br>
+												<strong>Tools:</strong> Pandas, NumPy, Scikit-learn, TensorFlow<br>
+												<strong>Visualization:</strong> Matplotlib, Seaborn, ggplot2, D3.js</p>
+											</div>
+										</article>
+										<article>
+											<span class="icon solid fa-microscope"></span>
+											<div class="content">
+												<h3>Laboratory Techniques</h3>
+												<p><strong>Methods:</strong> [Specific lab techniques relevant to your field]<br>
+												<strong>Equipment:</strong> [Instruments you're proficient with]<br>
+												<strong>Safety:</strong> Certified in laboratory safety protocols</p>
+											</div>
+										</article>
+										<article>
+											<span class="icon solid fa-language"></span>
+											<div class="content">
+												<h3>Communication & Languages</h3>
+												<p><strong>Languages:</strong> English (Native), [Other languages and proficiency levels]<br>
+												<strong>Presentation:</strong> Conference presentations, poster sessions<br>
+												<strong>Writing:</strong> Technical writing, grant proposals, research papers</p>
+											</div>
+										</article>
+									</div>
+								</section>
 
-                            <section id="research" class="scroll-reveal">
-                                <header class="main">
-                                    <h2 class="section-title">Featured Research</h2>
-                                    <p class="section-subtitle">Innovating cost-effective protocols in animal biotechnology.</p>
-                                </header>
-                                <div class="card text-left max-w-4xl mx-auto">
-                                    <h3 class="text-xl font-bold text-[var(--primary-blue)]">A Cost-Effective Papain-Based Cardiomyocyte Tissue Dissociation Protocol for Banaba Philippine Native Chicken Embryos</h3>
-                                    <p class="text-md text-[var(--text-dark)] mt-1 mb-4">Undergraduate Thesis | Adviser: Percival P. Sangel, DVM, Ph.D.</p>
-                                    
-                                    <p class="text-[var(--text-dark)] mb-6">This study addressed a critical gap in avian-specific cell culture by developing and validating a cost-effective protocol for isolating heart muscle cells (cardiomyocytes) from native chicken embryos. The research aimed to find a more efficient and economical alternative to traditional enzymes like trypsin.</p>
+							<!-- Section: Publications & Presentations -->
+								<section>
+									<header class="major">
+										<h2>Publications & Presentations</h2>
+									</header>
+									<div class="row">
+										<div class="col-6 col-12-medium">
+											<h3>Publications</h3>
+											<ul class="alt">
+												<li><strong>[Your Name]</strong>, Co-Author Name. (Year). "Title of Paper." <em>Journal Name</em>, Volume(Issue), pages. DOI: [if applicable]</li>
+												<li>Co-Author Name, <strong>[Your Name]</strong>, et al. (Year). "Title of Paper." <em>Conference Proceedings</em>, pages.</li>
+												<li>[Add more publications as applicable]</li>
+											</ul>
+										</div>
+										<div class="col-6 col-12-medium">
+											<h3>Conference Presentations</h3>
+											<ul class="alt">
+												<li><strong>[Your Name]</strong>. (Year). "Presentation Title." Poster presented at [Conference Name], [Location].</li>
+												<li><strong>[Your Name]</strong>. (Year). "Presentation Title." Oral presentation at [Conference Name], [Location].</li>
+												<li>[Add more presentations as applicable]</li>
+											</ul>
+										</div>
+									</div>
+								</section>
 
-                                    <h4 class="text-xl font-semibold text-[var(--primary-blue)] mt-8 mb-4 text-center">Research Visuals & Highlights</h4>
-                                    <div class="research-media-grid">
-                                        <div class="research-media-item">
-                                            <img src="https://drive.google.com/file/d/1Nr2qfC5w0oN5xLRfFuWuHhAmPEZ9MkYm/preview" alt="Scientist pipetting liquid into a test tube">
-                                            <p class="research-media-caption">Precision pipetting during cell culture work.</p>
-                                        </div>
-                                        <div class="research-media-item">
-                                            <img src="https://drive.google.com/file/d/1DHlxCR__1mUcpvp-JmIwVjNwuD0hRyO_/preview" alt="Petri dishes being handled in a sterile laminar flow hood">
-                                            <p class="research-media-caption">Cultivating cell samples in a sterile environment.</p>
-                                        </div>
-                                    </div>
-                                    
-                                    <h4 class="text-xl font-semibold text-[var(--primary-blue)] mb-4 mt-8">Key Findings: Papain Outperforms Trypsin</h4>
-                                    <p class="text-[var(--text-dark)] mb-6">The results demonstrated that papain, a plant-derived enzyme, is a superior agent for this application. It yielded significantly higher initial cell viability and was the most economical option, paving the way for more accessible and scalable research in avian cardiac biology and genetics.</p>
+							<!-- Section: Leadership & Service -->
+								<section>
+									<header class="major">
+										<h2>Leadership & Service</h2>
+									</header>
+									<div class="row">
+										<div class="col-4 col-12-medium">
+											<h3>Academic Leadership</h3>
+											<ul>
+												<li>President, [Academic Club/Society] (Year-Year)</li>
+												<li>Teaching Assistant, [Course Name] (Semester Year)</li>
+												<li>Peer Tutor, [Subject] (Year-Year)</li>
+												<li>Student Representative, [Committee] (Year)</li>
+											</ul>
+										</div>
+										<div class="col-4 col-12-medium">
+											<h3>Community Service</h3>
+											<ul>
+												<li>Volunteer, [Organization Name] (Year-Year)</li>
+												<li>Science Fair Judge, [Event] (Year)</li>
+												<li>STEM Outreach Coordinator (Year)</li>
+												<li>Mentor, [Mentoring Program] (Year-Year)</li>
+											</ul>
+										</div>
+										<div class="col-4 col-12-medium">
+											<h3>Professional Development</h3>
+											<ul>
+												<li>Member, [Professional Society] (Year-Present)</li>
+												<li>Workshop Attendee, [Workshop Name] (Year)</li>
+												<li>Certificate, [Certification Name] (Year)</li>
+												<li>Summer School, [Program Name] (Year)</li>
+											</ul>
+										</div>
+									</div>
+								</section>
 
-                                    <div class="chart-container mb-6">
-                                        <canvas id="viabilityChart"></canvas>
-                                    </div>
-                                    
-                                    <p class="text-center mt-6">
-                                        <a href="https://drive.google.com/drive/folders/1-UtQ_RMvIdHH82CefUNGEogQCXeW-Ciy?usp=sharing" target="_blank" class="custom-button" aria-label="View Research Abstracts">
-                                            <span class="mr-2 fas fa-file-alt"></span> View Research Abstracts
-                                        </a>
-                                    </p>
-
-                                    <h4 class="text-xl font-semibold text-[var(--primary-blue)] mb-2">Broader Impact</h4>
-                                    <p class="text-[var(--text-dark)]">This research provides a foundational tool for advancements in:</p>
-                                    <ul class="list-disc list-inside text-[var(--text-dark)] mt-2 space-y-1">
-                                        <li><b>Biomedical Research:</b> Improving models for cardiac physiology and disease.</li>
-                                        <li><b>Animal Biotechnology:</b> Facilitating genetic engineering and trait enhancement in poultry.</li>
-                                        <li><b>Conservation Biology:</b> Aiding genetic conservation of indigenous breeds.</li>
-                                    </ul>
-                                </div>
-                            </section>
-
-                            <hr class="major" />
-
-                            <section id="skills" class="scroll-reveal">
-                                <header class="main">
-                                    <h2 class="section-title">Skills & Certifications</h2>
-                                    <p class="section-subtitle">A versatile toolkit for laboratory research and professional collaboration.</p>
-                                </header>
-                                <p class="text-center mb-8">
-                                    <a href="https://drive.google.com/drive/folders/1jawP4eIPWSI7b4gQU9xuAaVQNJH_PqVS?usp=sharing" target="_blank" class="custom-button" aria-label="View All Skills & Certifications Documents">
-                                        <span class="mr-2 fas fa-award"></span> View All Skills & Certifications Documents
-                                    </a>
-                                </p>
-                                <div class="skills-grid max-w-4xl mx-auto">
-                                    <div class="skill-card">
-                                        <h3>Molecular & Cellular Biotechnology</h3>
-                                        <ul>
-                                            <li><i class="fas fa-dna"></i> DNA/RNA Extraction, PCR</li>
-                                            <li><i class="fas fa-code-branch"></i> Recombinant DNA Technology, Molecular Marker Analysis</li>
-                                            <li><i class="fas fa-microchip"></i> Bioinformatics Tools, Genetic Engineering</li>
-                                            <li><i class="fas fa-microscope"></i> Animal & Plant Tissue Culture (reproductive & agricultural applications)</li>
-                                        </ul>
-                                    </div>
-                                    <div class="skill-card">
-                                        <h3>Laboratory Techniques</h3>
-                                        <ul>
-                                            <li><i class="fas fa-flask"></i> Protein Isolation & Purification, Enzymatic Assays</li>
-                                            <li><i class="fas fa-bacteria"></i> Microbial Applications (biotechnology & food safety)</li>
-                                            <li><i class="fas fa-chart-bar"></i> Spectrophotometry, Electrophoresis</li>
-                                            <li><i class="fas fa-vial"></i> Sterile Techniques, Media Preparation, Experimental Design</li>
-                                        </ul>
-                                    </div>
-                                    <div class="skill-card">
-                                        <h3>Animal Science & Ethics</h3>
-                                        <ul>
-                                            <li><i class="fas fa-cow"></i> Farm Animal Anatomy, Physiology, Nutrition, Breeding</li>
-                                            <li><i class="fas fa-dna"></i> Genetic Improvement</li>
-                                            <li><i class="fas fa-balance-scale"></i> IP Rights, Biosafety Protocols, Regulatory Compliance</li>
-                                            <li><i class="fas fa-handshake"></i> Ethical Considerations, Socio-agricultural Impacts</li>
-                                        </ul>
-                                    </div>
-                                    <div class="skill-card">
-                                        <h3>Project Management & Communication</h3>
-                                        <ul>
-                                            <li><i class="fas fa-tasks"></i> Project Coordination, Time Management</li>
-                                            <li><i class="fas fa-users"></i> Cross-Functional Collaboration, Stakeholder Engagement</li>
-                                            <li><i class="fas fa-comments"></i> Scientific Communication, Public Speaking</li>
-                                            <li><i class="fas fa-pencil-alt"></i> IEC Material Development, Social Media Content Creation</li>
-                                        </ul>
-                                    </div>
-                                    <div class="skill-card">
-                                        <h3>Computer & Software</h3>
-                                        <ul>
-                                            <li><i class="fas fa-chart-pie"></i> Basic Statistical Softwares (R Studio & Jamovi)</li>
-                                            <li><i class="fas fa-file-excel"></i> MS Office and G-Suite</li>
-                                            <li><i class="fas fa-share-alt"></i> Social Media Management</li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="certifications-list max-w-4xl mx-auto">
-                                    <h3 class="text-xl font-bold text-[var(--primary-blue)] mb-4">Professional Certifications</h3>
-                                    <div class="certification-item">
-                                        <i class="fas fa-envelope-open-text"></i>
-                                        <div class="details">
-                                            <p class="cert-name">Business Email</p>
-                                            <p class="cert-info">HP LIFE Foundation, July 26, 2025</p>
-                                        </div>
-                                    </div>
-                                    <div class="certification-item">
-                                        <i class="fas fa-database"></i>
-                                        <div class="details">
-                                            <p class="cert-name">Access Bioinformatics Databases with Biopython</p>
-                                            <p class="cert-info">Coursera Project Network, July 22, 2025</p>
-                                        </div>
-                                    </div>
-                                    <div class="certification-item">
-                                        <i class="fas fa-headset"></i>
-                                        <div class="details">
-                                            <p class="cert-name">Introduction to Customer Service</p>
-                                            <p class="cert-info">CVS Health via Coursera, March 16, 2024</p>
-                                        </div>
-                                    </div>
-                                    <div class="certification-item">
-                                        <i class="fas fa-project-diagram"></i>
-                                        <div class="details">
-                                            <p class="cert-name">Introduction to Project Management</p>
-                                            <p class="cert-info">Coursera Project Network, Feb 27, 2024</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </section>
-
-                            <hr class="major" />
-
-                            <!-- New Section: Interests -->
-                            <section id="interests" class="scroll-reveal">
-                                <header class="main">
-                                    <h2 class="section-title">Areas of Interest</h2>
-                                    <p class="section-subtitle">Exploring the frontiers of agricultural biotechnology and beyond.</p>
-                                </header>
-                                <div class="interests-grid max-w-4xl mx-auto">
-                                    <div class="interest-item">
-                                        <i class="fas fa-laptop-code icon"></i>
-                                        <span>Bioinformatics</span>
-                                    </div>
-                                    <div class="interest-item">
-                                        <i class="fas fa-vial icon"></i>
-                                        <span>Stem Cell Biology</span>
-                                    </div>
-                                    <div class="interest-item">
-                                        <i class="fas fa-flask icon"></i>
-                                        <span>Cell and Tissue Culture</span>
-                                    </div>
-                                    <div class="interest-item">
-                                        <i class="fas fa-egg icon"></i>
-                                        <span>Reproductive Biotechnology</span>
-                                    </div>
-                                    <div class="interest-item">
-                                        <i class="fas fa-paw icon"></i>
-                                        <span>Animal Science</span>
-                                    </div>
-                                    <div class="interest-item">
-                                        <i class="fas fa-chart-line icon"></i>
-                                        <span>Biostatistics</span>
-                                    </div>
-                                    <div class="interest-item">
-                                        <i class="fas fa-dna icon"></i>
-                                        <span>Genomics</span>
-                                    </div>
-                                    <div class="interest-item">
-                                        <i class="fas fa-tractor icon"></i>
-                                        <span>Agriculture</span>
-                                    </div>
-                                </div>
-                            </section>
-
-                            <hr class="major" />
-
-                            <section id="experience" class="scroll-reveal">
-                                <header class="main">
-                                    <h2 class="section-title">Professional Experience</h2>
-                                    <p class="section-subtitle">A comprehensive history of practical application, leadership, and community engagement.</p>
-                                </header>
-
-                                <div class="max-w-4xl mx-auto">
-                                    <div class="tabs flex border-b border-[var(--border-light)] mb-8">
-                                        <button id="tab-work" class="experience-tab active" aria-label="Work Experience Tab">Work</button>
-                                        <button id="tab-leadership" class="experience-tab" aria-label="Leadership Experience Tab">Leadership</button>
-                                        <button id="tab-training" class="experience-tab" aria-label="Training and Volunteering Tab">Training & Volunteering</button>
-                                    </div>
-
-                                    <div id="content-work" class="tab-content active space-y-8">
-                                        <div class="card">
-                                            <h3 class="text-xl font-bold text-[var(--primary-blue)]">Student Intern</h3>
-                                            <p class="font-semibold text-[var(--primary-blue)]">Dairy Research and Training Institute (DTRI), UPLB</p>
-                                            <p class="text-sm text-[var(--text-medium)] mb-3">Jun 2025 - Jul 2025</p>
-                                            <ul class="list-disc list-inside text-[var(--text-dark)] space-y-1">
-                                                <li>Maintained structured records for Panay Native Cattle, including phenotypic and breed documentation.</li>
-                                                <li>Participated in dairy herd management, feed variation trials, and milk production monitoring.</li>
-                                                <li>Assisted in fresh semen extension, cryopreservation, and post-thaw performance assessment.</li>
-                                                <li>Operated Computer-Assisted Semen Analysis (CASA) system for semen quality evaluation.</li>
-                                            </ul>
-                                            <h4 class="text-xl font-semibold text-[var(--primary-blue)] mt-8 mb-4 text-center">DTRI Internship Highlights</h4>
-                                            <div class="dtri-slideshow-container">
-                                                <div class="dtri-slide active video-container">
-                                                    <iframe src="https://drive.google.com/file/d/118vBOE_CtVrwB7ESPAmd07Vi0KqapISD/preview" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen muted loop title="DTRI Internship Experience Video 1"></iframe>
-                                                </div>
-                                                <div class="dtri-slide video-container">
-                                                    <iframe src="https://drive.google.com/file/d/1KGpMWJOdaxpnn3RHLl3QqWwRQpF3ky5h/preview" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen muted loop title="DTRI Internship Experience Video 2"></iframe>
-                                                </div>
-                                                <div class="dtri-slide video-container">
-                                                    <iframe src="https://drive.google.com/file/d/1KEx8N6EKtwaQVfa1JfgpXn1YqcUg-Zao/preview" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen muted loop title="DTRI Internship Experience Video 3"></iframe>
-                                                </div>
-                                                <div class="dtri-slide-overlay"></div>
-                                            </div>
-                                            <p class="caption-text">A visual overview of my DTRI Internship experience.</p>
-                                        </div>
-                                        <div class="card">
-                                            <h3 class="text-xl font-bold text-[var(--primary-blue)]">Peer Counselor & Student Assistant</h3>
-                                            <p class="font-semibold text-[var(--primary-blue)]">Office of Counseling and Guidance (OCG), OVCSA</p>
-                                            <p class="text-sm text-[var(--text-medium)] mb-3">Sept 2023 - Jul 2024</p>
-                                            <ul class="list-disc list-inside text-[var(--text-dark)] space-y-1">
-                                                <li>Managed Freshman Welcoming Activities and spearheaded an outreach program for children.</li>
-                                                <li>Assisted in publication material creation and administrative work.</li>
-                                            </ul>
-                                        </div>
-                                         <div class="card">
-                                            <h3 class="text-xl font-bold text-[var(--primary-blue)]">Student Assistant</h3>
-                                            <p class="font-semibold text-[var(--primary-blue)]">Office of Student Housing (OSH), OVCSA</p>
-                                            <p class="text-sm text-[var(--text-medium)] mb-3">Feb 2025 - Jun 2025</p>
-                                            <ul class="list-disc list-inside text-[var(--text-dark)] space-y-1">
-                                                <li>Handled file forwarding, filing, and management for student housing-related concerns.</li>
-                                                <li>Assisted in publication material creation and general administrative work.</li>
-                                            </ul>
-                                        </div>
-                                        <div class="card">
-                                            <h3 class="text-xl font-bold text-[var(--primary-blue)]">Freelance Tutor</h3>
-                                            <p class="font-semibold text-[var(--primary-blue)]">Self-employed</p>
-                                            <p class="text-sm text-[var(--text-medium)] mb-3">Oct 2024 - Mar 2025</p>
-                                            <ul class="list-disc list-inside text-[var(--text-dark)] space-y-1">
-                                                <li>Designed and delivered personalized, interactive math lessons for junior high school students.</li>
-                                                <li>Monitored student progress and developed personalized learning strategies.</li>
-                                            </ul>
-                                        </div>
-                                         <div class="card">
-                                            <h3 class="text-xl font-bold text-[var(--primary-blue)]">Provincial Hospital Billing Section Assistant</h3>
-                                            <p class="font-semibold text-[var(--primary-blue)]">Special Program for the Employment of Students</p>
-                                            <p class="text-sm text-[var(--text-medium)] mb-3">Apr 2019 - May 2019</p>
-                                            <ul class="list-disc list-inside text-[var(--text-dark)] space-y-1">
-                                                <li>Managed and organized sensitive patient files and billing statements in a hospital setting.</li>
-                                                <li>Arranged and secured newborn patient files.</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                    <div id="content-leadership" class="tab-content space-y-8">
-                                        <div class="card">
-                                            <h3 class="text-xl font-bold text-[var(--primary-blue)]">Director for Exchange Relations</h3>
-                                            <p class="font-semibold text-[var(--primary-blue)]">AIESEC in the Philippines</p>
-                                            <p class="text-sm text-[var(--text-medium)] mb-3">Aug 2023 - Feb 2024</p>
-                                            <ul class="list-disc list-inside text-[var(--text-dark)] space-y-1">
-                                                <li>Oversaw international exchange programs, fostering cross-cultural collaboration.</li>
-                                            </ul>
-                                        </div>
-                                        <div class="card">
-                                            <h3 class="text-xl font-bold text-[var(--primary-blue)]">Auditor, Finance Committee Head</h3>
-                                            <p class="font-semibold text-[var(--primary-blue)]">UP League of Agricultural Biotechnology Students</p>
-                                            <p class="text-sm text-[var(--text-medium)] mb-3">Apr 2023 - Aug 2023</p>
-                                            <ul class="list-disc list-inside text-[var(--text-dark)] space-y-1">
-                                                <li>Managed financial records, oversaw budgets, and ensured fiscal responsibility for the organization.</li>
-                                            </ul>
-                                        </div>
-                                        <div class="card">
-                                            <h3 class="text-xl font-bold text-[var(--primary-blue)]">Culture Section Staff & Script Writer</h3>
-                                            <p class="font-semibold text-[var(--primary-blue)]">UPLB Perspective</p>
-                                            <p class="text-sm text-[var(--text-medium)] mb-3">Oct 2021 - Aug 2023</p>
-                                            <ul class="list-disc list-inside text-[var(--text-dark)] space-y-1">
-                                                <li>Contributed to campus journalism through writing and content creation for cultural features.</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                    <div id="content-training" class="tab-content space-y-8">
-                                        <div class="card">
-                                            <h3 class="text-xl font-bold text-[var(--primary-blue)]">'Off-the-Street, On-to-School' Outreach Program Head</h3>
-                                            <p class="font-semibold text-[var(--primary-blue)]">UPLB GABAY Volunteer Corps</p>
-                                            <p class="text-sm text-[var(--text-medium)] mb-3">May 2023 - Dec 2023</p>
-                                            <ul class="list-disc list-inside text-[var(--text-dark)] space-y-1">
-                                                <li>Led the planning and execution of community outreach programs focused on education for underprivileged children.</li>
-                                            </ul>
-                                            <span class="image main"><img src="https://drive.google.com/file/d/1K2WcbBGht7597MnLmnX0IxgRwOnUf94w/preview" alt="Daniel with children during an outreach program, group photo"></span>
-                                            <p class="caption-text">Group photo during an "Off-the-Street, On-to-School" outreach program.</p>
-                                        </div>
-                                        <div class="card">
-                                            <h3 class="text-xl font-bold text-[var(--primary-blue)]">SIGLAW 2024 - Task Delegation Coordinator & Talk Assistant</h3>
-                                            <p class="font-semibold text-[var(--primary-blue)]">UP League of Agricultural Biotechnology Students (UP LABS)</p>
-                                            <p class="text-sm text-[var(--text-medium)] mb-3">Specific Dates for SIGLAW 2024 (e.g., Feb 2024)</p>
-                                            <ul class="list-disc list-inside text-[var(--text-dark)] space-y-1">
-                                                <li>Coordinated D-day task delegations for SIGLAW 2024, the flagship community service event.</li>
-                                                <li>Assisted in hosted talks for farmers affected by a recent onion pest problem, facilitating knowledge transfer.</li>
-                                                <li>Participated in the distribution of school supplies to the children of participating farmers.</li>
-                                            </ul>
-                                            <div class="video-container">
-                                                <iframe src="https://drive.google.com/file/d/1wdz0Z-V3PCRfmBZ18qk0il7N6-QuO2Pa/preview" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen muted loop title="SIGLAW 2024 Video"></iframe>
-                                            </div>
-                                            <p class="caption-text">Watch the official video from SIGLAW 2024.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </section>
-
-                            <hr class="major" />
-
-                            <section id="documents" class="scroll-reveal">
-                                <header class="main">
-                                    <h2 class="section-title">Professional Documents</h2>
-                                    <p class="section-subtitle">Download my full Resume and Curriculum Vitae for a comprehensive overview.</p>
-                                </header>
-                                <div class="max-w-2xl mx-auto card flex flex-col md:flex-row items-center justify-center gap-6">
-                                    <a href="https://drive.google.com/drive/folders/1n-2_PLQECrpMery48Zp2a4YxBejGIHZT?usp=sharing" target="_blank" class="custom-button" aria-label="Download Resume">
-                                        <span class="mr-2 fas fa-file-pdf"></span> Download Resume
-                                    </a>
-                                    <a href="https://drive.google.com/drive/folders/1D2B2aZ3FLX8yeICSyDJpShoZJBWv7U5f?usp=sharing" target="_blank" class="custom-button secondary" aria-label="Download CV">
-                                        <span class="mr-2 fas fa-file-alt"></span> Download CV
-                                    </a>
-                                </div>
-                            </section>
-
-                            <hr class="major" />
-
-                            <!-- Contact Section -->
-                            <section id="contact-section" class="scroll-reveal">
-                                <header class="main">
-                                    <h2 class="section-title">Get In Touch</h2>
-                                    <p class="section-subtitle">Feel free to reach out for collaborations, inquiries, or just to connect.</p>
-                                </header>
-                                <div class="max-w-4xl mx-auto card">
-                                    <div class="contact-grid">
-                                        <div class="contact-item">
-                                            <i class="icon solid fa-envelope"></i>
-                                            <div class="text">
-                                                Email: <a href="mailto:dzgdelmundo@gmail.com" aria-label="Email Daniel">dzgdelmundo@gmail.com</a>
-                                            </div>
-                                        </div>
-                                        <div class="contact-item">
-                                            <i class="icon solid fa-phone"></i>
-                                            <div class="text">
-                                                Phone: <a href="tel:+639182590198" aria-label="Call Daniel">+63 918 259 0198</a>
-                                            </div>
-                                        </div>
-                                        <div class="contact-item">
-                                            <i class="icon brands fa-linkedin-in"></i>
-                                            <div class="text">
-                                                LinkedIn: <a href="https://linkedin.com/in/dzgdelmundo/" target="_blank" aria-label="LinkedIn Profile">linkedin.com/in/dzgdelmundo/</a>
-                                            </div>
-                                        </div>
-                                        <div class="contact-item">
-                                            <i class="icon solid fa-home"></i>
-                                            <div class="text">
-                                                Location: Santa Cruz, Laguna, Philippines
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </section>
+							<!-- Section: Projects Portfolio -->
+								<section>
+									<header class="major">
+										<h2>Selected Projects</h2>
+									</header>
+									<div class="box alt">
+										<div class="row gtr-50 gtr-uniform">
+											<div class="col-4">
+												<span class="image fit">
+													<img src="images/pic04.jpg" alt="Project 1" />
+													<h4>Data Analysis Project</h4>
+													<p>Brief description of a significant data analysis project, including tools used and insights gained.</p>
+												</span>
+											</div>
+											<div class="col-4">
+												<span class="image fit">
+													<img src="images/pic05.jpg" alt="Project 2" />
+													<h4>Software Development</h4>
+													<p>Description of a software project you developed, highlighting programming skills and problem-solving abilities.</p>
+												</span>
+											</div>
+											<div class="col-4">
+												<span class="image fit">
+													<img src="images/pic06.jpg" alt="Project 3" />
+													<h4>Research Collaboration</h4>
+													<p>Details about a collaborative research project, emphasizing teamwork and interdisciplinary skills.</p>
+												</span>
+											</div>
+										</div>
+									</div>
+								</section>
 
 						</div>
 					</div>
@@ -1050,46 +271,104 @@
 				<!-- Sidebar -->
 					<div id="sidebar">
 						<div class="inner">
-							<!-- Search (Optional, keeping for template structure) -->
+
+							<!-- Search -->
 								<section id="search" class="alt">
 									<form method="post" action="#">
-										<input type="text" name="query" id="query" placeholder="Search" aria-label="Search site" />
+										<input type="text" name="query" id="query" placeholder="Search portfolio..." />
 									</form>
 								</section>
 
 							<!-- Menu -->
 								<nav id="menu">
 									<header class="major">
-										<h2>Menu</h2>
+										<h2>Navigation</h2>
 									</header>
 									<ul>
-										<li><a href="#home">Home</a></li>
+										<li><a href="#banner">Home</a></li>
 										<li><a href="#about">About Me</a></li>
 										<li><a href="#research">Research</a></li>
-										<li><a href="#skills">Skills & Certifications</a></li>
-                                        <li><a href="#interests">Areas of Interest</a></li> <!-- New Menu Item -->
-										<li><a href="#experience">Professional Experience</a></li>
-										<li><a href="#documents">Professional Documents</a></li>
-										<li><a href="#contact-section">Contact</a></li>
+										<li><a href="#skills">Skills</a></li>
+										<li>
+											<span class="opener">Academic Work</span>
+											<ul>
+												<li><a href="#publications">Publications</a></li>
+												<li><a href="#presentations">Presentations</a></li>
+												<li><a href="#projects">Projects</a></li>
+												<li><a href="cv.pdf" target="_blank">Download CV</a></li>
+											</ul>
+										</li>
+										<li><a href="#leadership">Leadership</a></li>
+										<li><a href="#contact">Contact</a></li>
+										<li>
+											<span class="opener">Resources</span>
+											<ul>
+												<li><a href="statement-of-purpose.pdf" target="_blank">Statement of Purpose</a></li>
+												<li><a href="transcripts.pdf" target="_blank">Transcripts</a></li>
+												<li><a href="portfolio.pdf" target="_blank">Portfolio PDF</a></li>
+											</ul>
+										</li>
 									</ul>
 								</nav>
 
-							<!-- Section (Optional, keeping for template structure) -->
+							<!-- Section: Quick Stats -->
 								<section>
+									<header class="major">
+										<h2>Quick Stats</h2>
+									</header>
+									<div class="mini-posts">
+										<article>
+											<h4>Academic Performance</h4>
+											<p><strong>GPA:</strong> [Your GPA]/4.0<br>
+											<strong>Major GPA:</strong> [Major GPA]/4.0<br>
+											<strong>Class Rank:</strong> Top [X]%</p>
+										</article>
+										<article>
+											<h4>Research Output</h4>
+											<p><strong>Publications:</strong> [Number]<br>
+											<strong>Presentations:</strong> [Number]<br>
+											<strong>Research Hours:</strong> [Number]+</p>
+										</article>
+										<article>
+											<h4>Skills Summary</h4>
+											<p><strong>Programming Languages:</strong> [Number]<br>
+											<strong>Software Proficiencies:</strong> [Number]<br>
+											<strong>Certifications:</strong> [Number]</p>
+										</article>
+									</div>
+								</section>
+
+							<!-- Section: Testimonials -->
+								<section>
+									<header class="major">
+										<h2>Recommendations</h2>
+									</header>
+									<blockquote>
+										"[Student Name] demonstrates exceptional analytical skills and a genuine passion for research. Their work on [project] showed remarkable insight and methodological rigor."
+										<br><br>
+										<strong>- Dr. [Professor Name]</strong><br>
+										<em>Professor of [Department], [University]</em>
+									</blockquote>
+								</section>
+
+							<!-- Section: Contact -->
+								<section id="contact">
 									<header class="major">
 										<h2>Get in touch</h2>
 									</header>
-									<p>Feel free to reach out for collaborations, inquiries, or just to connect.</p>
+									<p>I welcome opportunities to discuss my research interests, academic goals, and potential collaborations. Please feel free to reach out!</p>
 									<ul class="contact">
-										<li class="icon solid fa-envelope"><a href="mailto:dzgdelmundo@gmail.com" aria-label="Email Daniel">dzgdelmundo@gmail.com</a></li>
-										<li class="icon solid fa-phone"><a href="tel:+639182590198" aria-label="Call Daniel">+63 918 259 0198</a></li>
-										<li class="icon solid fa-home">Santa Cruz, Laguna, Philippines</li>
+										<li class="icon solid fa-envelope"><a href="mailto:your.email@university.edu">your.email@university.edu</a></li>
+										<li class="icon solid fa-phone">(XXX) XXX-XXXX</li>
+										<li class="icon solid fa-home">[Your Address]<br />
+										[City, State ZIP]</li>
+										<li class="icon brands fa-linkedin"><a href="https://linkedin.com/in/yourprofile">LinkedIn Profile</a></li>
 									</ul>
 								</section>
 
 							<!-- Footer -->
 								<footer id="footer">
-									<p class="copyright">&copy; 2025 Daniel Zachary G. del Mundo. All rights reserved. Design: <a href="https://html5up.net" target="_blank">HTML5 UP</a>.</p>
+									<p class="copyright">&copy; [Current Year] [Your Name]. All rights reserved. Template: <a href="https://html5up.net">HTML5 UP</a>.</p>
 								</footer>
 
 						</div>
@@ -1098,262 +377,11 @@
 			</div>
 
 		<!-- Scripts -->
-        <!-- Template's core JavaScript files -->
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/browser.min.js"></script>
-		<script src="assets/js/breakpoints.min.js"></script>
-		<script src="assets/js/util.js"></script> <!-- This file is typically part of HTML5 UP templates -->
-		<script src="assets/js/main.js"></script> <!-- This file contains the template's main JS logic, including sidebar toggle -->
-
-        <!-- Your SPA's custom JavaScript -->
-        <script>
-            // Function to handle tab switching (moved to global scope)
-            function switchTab(tabName) {
-                const tabs = ['work', 'leadership', 'training'];
-                tabs.forEach(tab => {
-                    document.getElementById(`tab-${tab}`).classList.remove('active');
-                    document.getElementById(`content-${tab}`).classList.remove('active'); // Also remove 'active' from content
-                });
-                document.getElementById(`tab-${tabName}`).classList.add('active');
-                document.getElementById(`content-${tabName}`).classList.add('active'); // Add 'active' to content
-            }
-
-            document.addEventListener('DOMContentLoaded', () => {
-                // Attach event listeners to tab buttons
-                document.getElementById('tab-work').addEventListener('click', () => switchTab('work'));
-                document.getElementById('tab-leadership').addEventListener('click', () => switchTab('leadership'));
-                document.getElementById('tab-training').addEventListener('click', () => switchTab('training'));
-
-                // Chart.js initialization
-                const ctx = document.getElementById('viabilityChart').getContext('2d');
-                const viabilityChart = new Chart(ctx, {
-                    type: 'bar',
-                    data: {
-                        labels: ['Papain', 'Trypsin', 'Trypsin-Papain Mix'],
-                        datasets: [{
-                            label: 'Mean Initial Cell Viability (%)',
-                            data: [64.4, 30.6, 23.3],
-                            backgroundColor: [
-                                'rgba(33, 85, 128, 0.8)', /* Primary blue, slightly more opaque */
-                                'rgba(108, 117, 125, 0.7)', /* Secondary gray, slightly more opaque */
-                                'rgba(136, 136, 136, 0.7)' /* Tertiary gray, slightly more opaque */
-                            ],
-                            borderColor: [
-                                'rgba(33, 85, 128, 1)',
-                                'rgba(108, 117, 125, 1)',
-                                'rgba(136, 136, 136, 1)'
-                            ],
-                            borderWidth: 1
-                        }]
-                    },
-                    options: {
-                        responsive: true,
-                        maintainAspectRatio: false,
-                        scales: {
-                            y: {
-                                beginAtZero: true,
-                                title: {
-                                    display: true,
-                                    text: 'Viability (%)',
-                                    font: {
-                                        family: 'Open Sans',
-                                        size: 14,
-                                        weight: '600'
-                                    },
-                                    color: 'var(--text-dark)'
-                                }
-                            },
-                            x: {
-                                ticks: {
-                                    font: {
-                                        family: 'Open Sans'
-                                    },
-                                    color: 'var(--text-dark)'
-                                }
-                            }
-                        },
-                        plugins: {
-                            legend: {
-                                display: false
-                            },
-                            tooltip: {
-                                callbacks: {
-                                    label: function(context) {
-                                        let label = context.dataset.label || '';
-                                        if (label) {
-                                            label += ': ';
-                                        }
-                                        if (context.parsed.y !== null) {
-                                            label += context.parsed.y + '%';
-                                        }
-                                        return label;
-                                    }
-                                },
-                                bodyFont: {
-                                    family: 'Open Sans'
-                                },
-                                titleFont: {
-                                    family: 'Roboto Slab'
-                                }
-                            },
-                            title: {
-                                display: true,
-                                text: 'Comparison of Enzyme Effectiveness on Cardiomyocyte Viability',
-                                font: {
-                                    family: 'Roboto Slab',
-                                    size: 16,
-                                    weight: '700'
-                                },
-                                color: 'var(--primary-blue)'
-                            }
-                        }
-                    }
-                });
-
-                // Slideshow logic for About Me section
-                let aboutSlideIndex = 0;
-                const aboutSlides = document.querySelectorAll('.about-slide');
-                let aboutSlideshowInterval;
-
-                const startAboutSlideshow = () => {
-                    stopAboutSlideshow(); // Clear any existing interval before starting a new one
-                    aboutSlideshowInterval = setInterval(showNextAboutSlide, 6000); // Advance every 6 seconds
-                };
-
-                const stopAboutSlideshow = () => {
-                    clearInterval(aboutSlideshowInterval);
-                };
-
-                const showNextAboutSlide = () => {
-                    aboutSlides.forEach((slide, index) => {
-                        slide.classList.remove('active');
-                        // Pause videos when they are not active
-                        if (slide.classList.contains('video-container')) {
-                            const iframe = slide.querySelector('iframe');
-                            if (iframe && iframe.contentWindow && typeof iframe.contentWindow.postMessage === 'function') {
-                                // For Google Drive embeds, this might not work due to cross-origin restrictions.
-                                // The `muted` and `loop` attributes handle the GIF-like behavior.
-                                // We primarily stop the slideshow timer itself.
-                                iframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
-                            }
-                        }
-                    });
-
-                    aboutSlideIndex++;
-                    if (aboutSlideIndex >= aboutSlides.length) { aboutSlideIndex = 0; } // Loop back to start
-                    
-                    const currentSlide = aboutSlides[aboutSlideIndex];
-                    currentSlide.classList.add('active');
-
-                    // If the current slide is a video, ensure it plays and pause the slideshow timer
-                    if (currentSlide.classList.contains('video-container')) {
-                        const iframe = currentSlide.querySelector('iframe');
-                        if (iframe && iframe.contentWindow && typeof iframe.contentWindow.postMessage === 'function') {
-                            // For Google Drive embeds, autoplay is handled by the `autoplay` attribute.
-                            // The main goal here is to stop the *slideshow* timer.
-                            iframe.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
-                        }
-                        stopAboutSlideshow(); // Pause automatic slideshow when video is playing
-                    } else {
-                        startAboutSlideshow(); // Resume automatic slideshow for image slides
-                    }
-                };
-
-                // Initial display of the first slide and start slideshow
-                if (aboutSlides.length > 0) {
-                    aboutSlides[0].classList.add('active');
-                    // If the first slide is a video, ensure it starts playing and the slideshow interval is cleared
-                    if (aboutSlides[0].classList.contains('video-container')) {
-                        const iframe = aboutSlides[0].querySelector('iframe');
-                        if (iframe && iframe.contentWindow && typeof iframe.contentWindow.postMessage === 'function') {
-                            iframe.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
-                        }
-                        stopAboutSlideshow();
-                    } else {
-                        startAboutSlideshow();
-                    }
-                }
-
-                // Slideshow logic for DTRI Internship section
-                let dtriSlideIndex = 0;
-                const dtriSlides = document.querySelectorAll('.dtri-slide');
-                let dtriSlideshowInterval;
-
-                const startDTRISlideshow = () => {
-                    stopDTRISlideshow(); // Clear any existing interval before starting a new one
-                    dtriSlideshowInterval = setInterval(showNextDTRISlide, 6000); // Advance every 6 seconds
-                };
-
-                const stopDTRISlideshow = () => {
-                    clearInterval(dtriSlideshowInterval);
-                };
-
-                const showNextDTRISlide = () => {
-                    dtriSlides.forEach((slide, index) => {
-                        slide.classList.remove('active');
-                        // Pause videos when they are not active
-                        if (slide.classList.contains('video-container')) {
-                            const iframe = slide.querySelector('iframe');
-                            if (iframe && iframe.contentWindow && typeof iframe.contentWindow.postMessage === 'function') {
-                                iframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
-                            }
-                        }
-                    });
-
-                    dtriSlideIndex++;
-                    if (dtriSlideIndex >= dtriSlides.length) { dtriSlideIndex = 0; } // Loop back to start
-                    
-                    const currentSlide = dtriSlides[dtriSlideIndex];
-                    currentSlide.classList.add('active');
-
-                    // If the current slide is a video, ensure it plays and pause the slideshow timer
-                    if (currentSlide.classList.contains('video-container')) {
-                        const iframe = currentSlide.querySelector('iframe');
-                        if (iframe && iframe.contentWindow && typeof iframe.contentWindow.postMessage === 'function') {
-                            iframe.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
-                        }
-                        stopDTRISlideshow(); // Pause automatic slideshow when video is playing
-                    } else {
-                        startDTRISlideshow(); // Resume automatic slideshow for image slides
-                    }
-                };
-
-                // Initial display of the first DTRI slide and start slideshow
-                if (dtriSlides.length > 0) {
-                    dtriSlides[0].classList.add('active');
-                    if (!dtriSlides[0].classList.contains('video-container')) { // Only start if first slide is not a video
-                        startDTRISlideshow();
-                    }
-                }
-
-                // Smooth scrolling for internal links, to work with template's existing behavior
-                document.querySelectorAll('#menu a[href^="#"]').forEach(anchor => {
-                    anchor.addEventListener('click', function (e) {
-                        e.preventDefault();
-                        document.querySelector(this.getAttribute('href')).scrollIntoView({
-                            behavior: 'smooth'
-                        });
-                    });
-                });
-
-                // Scroll Reveal Observer
-                const scrollRevealObserver = new IntersectionObserver((entries, observer) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            entry.target.classList.add('active');
-                            observer.unobserve(entry.target); // Stop observing once visible
-                        }
-                    });
-                }, {
-                    threshold: 0.1, // Trigger when 10% of the element is visible
-                    rootMargin: '0px 0px -50px 0px' // Start animation a bit before reaching the bottom of the viewport
-                });
-
-                document.querySelectorAll('.scroll-reveal').forEach(section => {
-                    scrollRevealObserver.observe(section);
-                });
-            });
-        </script>
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
 
 	</body>
 </html>
