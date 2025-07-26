@@ -8,7 +8,8 @@
         <!-- HTML5 UP Editorial Template CSS -->
 		<link rel="stylesheet" href="assets/css/main.css" />
         <!-- Font Awesome for icons (from template) -->
-        <link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
 
         <!-- Tailwind CSS CDN for custom styling and overrides -->
         <script src="https://cdn.tailwindcss.com"></script>
@@ -97,7 +98,7 @@
                 text-align: center;
             }
 
-            #home, #research, #interests, #documents { background-color: var(--bg-white); }
+            #home, #research, #interests, #documents, #contact-section { background-color: var(--bg-white); }
             #about, #skills, #experience { background-color: var(--bg-light-gray); }
             
             section {
@@ -213,7 +214,7 @@
             .slideshow-container {
                 position: relative;
                 max-width: 850px;
-                margin: 2.5em auto;
+                margin: 2.5em auto; /* Adjusted spacing */
                 overflow: hidden;
                 border-radius: 0.75em;
                 box-shadow: 0 0.3em 0.6em rgba(0, 0, 0, 0.1);
@@ -233,7 +234,8 @@
                 font-size: 0.9em;
                 text-align: center;
                 color: var(--text-medium);
-                margin-top: 0.5rem;
+                margin-top: 1.0rem; /* Adjusted spacing */
+                margin-bottom: 0.5rem; /* Adjusted spacing */
             }
 
             .video-container {
@@ -402,7 +404,13 @@
             #sidebar .icons li a { color: var(--text-medium); }
             /* Corrected hover colors for sidebar icons */
             #sidebar .icons li a:hover, #header .icons li a:hover { color: var(--primary-blue) !important; }
-            #menu ul a.opener:before, #menu ul span.opener:before { color: var(--text-medium); }
+            #menu ul a.opener:before, #menu ul span.opener:before { 
+                color: var(--text-medium); 
+                /* Override default red color from main.css */
+                content: '\f078' !important; /* Ensure correct icon is used */
+                font-family: 'Font Awesome 5 Free' !important; /* Ensure correct font family */
+                font-weight: 900 !important; /* Ensure correct font weight */
+            }
             #menu ul a.opener:hover:before, #menu ul a.active:before { color: var(--primary-blue); }
             /* Remove any red border or background from sidebar */
             #sidebar,
@@ -546,6 +554,52 @@
                 font-size: 0.9em;
                 color: var(--text-medium);
             }
+
+            /* Contact section specific styles */
+            #contact-section .contact-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 1.5em;
+                margin-top: 2em;
+            }
+
+            #contact-section .contact-item {
+                display: flex;
+                align-items: center;
+                background-color: var(--bg-white);
+                padding: 1.5em;
+                border-radius: 0.75em;
+                box-shadow: 0 0.15em 0.3em rgba(0, 0, 0, 0.05);
+                border: 1px solid var(--border-light);
+                transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+            }
+
+            #contact-section .contact-item:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 0.3em 0.6em rgba(0, 0, 0, 0.1);
+            }
+
+            #contact-section .contact-item .icon {
+                font-size: 2em;
+                color: var(--primary-blue);
+                margin-right: 1em;
+            }
+
+            #contact-section .contact-item .text {
+                font-size: 1.05em;
+                color: var(--text-dark);
+                text-align: left;
+            }
+
+            #contact-section .contact-item a {
+                color: var(--primary-blue);
+                text-decoration: none;
+                font-weight: 600;
+            }
+
+            #contact-section .contact-item a:hover {
+                text-decoration: underline;
+            }
         </style>
 	</head>
 	<body class="is-preload">
@@ -577,7 +631,7 @@
                                     </p>
                                     <div class="hero-buttons">
                                         <a href="#research" class="custom-button" aria-label="Explore My Research">Explore My Research</a>
-                                        <a href="#contact" class="custom-button secondary" aria-label="Get In Touch">Get In Touch</a>
+                                        <a href="#contact-section" class="custom-button secondary" aria-label="Get In Touch">Get In Touch</a>
                                     </div>
                                 </div>
                             </section>
@@ -598,15 +652,18 @@
                                     </p>
                                     
                                     <div class="slideshow-container">
-                                        <img class="about-slide active" src="https://drive.google.com/file/d/1K-s4DcP6WkeZjOsWAtAePcrk9GvefAbA/preview" alt="Daniel Zachary G. del Mundo outdoors, looking up">
+                                        <!-- Videos now include autoplay, muted, and loop attributes -->
+                                        <div class="about-slide video-container active">
+                                            <iframe src="https://drive.google.com/file/d/17XVWeEKsWG_lQFlqMz9aQuI_9B-1xHQ_/preview" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen autoplay muted loop title="Academic Journey Video 1"></iframe>
+                                        </div>
+                                        <img class="about-slide" src="https://drive.google.com/file/d/14dvRvLkrC7MKMT5SzSlIjkvI565-7TVb/preview" alt="Daniel Zachary G. del Mundo in a lab coat">
+                                        <img class="about-slide" src="https://drive.google.com/file/d/1ZItMmurAwwihMgpoNGIniBBnWyIfFr_K/preview" alt="Daniel Zachary G. del Mundo presenting">
+                                        <img class="about-slide" src="https://drive.google.com/file/d/1K-s4DcP6WkeZjOsWAtAePcrk9GvefAbA/preview" alt="Daniel Zachary G. del Mundo outdoors, looking up">
+                                        <div class="about-slide video-container">
+                                            <iframe src="https://drive.google.com/file/d/16hCOTIlVtznNKR9CJpaUYY_g3jFswsRI/preview" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen autoplay muted loop title="Academic Journey Video 2"></iframe>
+                                        </div>
+                                        <img class="about-slide" src="https://drive.google.com/file/d/1JzFjuJQ5gNB8kVgVAMk0R_G2BqaP9A05/preview" alt="Daniel Zachary G. del Mundo with a group">
                                         <img class="about-slide" src="https://drive.google.com/file/d/17X4zQ_ZUfi30PLpzOTW9mT_t2hKAkggD/preview" alt="Group photo on campus, possibly during an event">
-                                        <img class="about-slide" src="https://drive.google.com/file/d/14dvRvLkrC7MKMT5SzSlIjkvI565-7TVb/preview" alt="Two people working in a lab, handling liquids">
-                                        <div class="about-slide video-container">
-                                            <iframe src="https://drive.google.com/file/d/17XVWeEKsWG_lQFlqMz9aQuI_9B-1xHQ_/preview" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen muted loop title="Academic Journey Video"></iframe>
-                                        </div>
-                                        <div class="about-slide video-container">
-                                            <iframe src="https://drive.google.com/file/d/16hCOTIlVtznNKR9CJpaUYY_g3jFswsRI/preview" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen muted loop title="Academic Journey Video 2"></iframe>
-                                        </div>
                                         <div class="about-slide-overlay"></div>
                                     </div>
                                     <p class="caption-text">A glimpse into my academic journey and passions.</p>
@@ -826,13 +883,13 @@
                                             <h4 class="text-xl font-semibold text-[var(--primary-blue)] mt-8 mb-4 text-center">DTRI Internship Highlights</h4>
                                             <div class="dtri-slideshow-container">
                                                 <div class="dtri-slide active video-container">
-                                                    <iframe src="https://drive.google.com/file/d/118vBOE_CtVrwB7ESPAmd07Vi0KqapISD/preview" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="DTRI Internship Experience Video 1"></iframe>
+                                                    <iframe src="https://drive.google.com/file/d/118vBOE_CtVrwB7ESPAmd07Vi0KqapISD/preview" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen muted loop title="DTRI Internship Experience Video 1"></iframe>
                                                 </div>
                                                 <div class="dtri-slide video-container">
-                                                    <iframe src="https://drive.google.com/file/d/1KGpMWJOdaxpnn3RHLl3QqWwRQpF3ky5h/preview" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="DTRI Internship Experience Video 2"></iframe>
+                                                    <iframe src="https://drive.google.com/file/d/1KGpMWJOdaxpnn3RHLl3QqWwRQpF3ky5h/preview" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen muted loop title="DTRI Internship Experience Video 2"></iframe>
                                                 </div>
                                                 <div class="dtri-slide video-container">
-                                                    <iframe src="https://drive.google.com/file/d/1KEx8N6EKtwaQVfa1JfgpXn1YqcUg-Zao/preview" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="DTRI Internship Experience Video 3"></iframe>
+                                                    <iframe src="https://drive.google.com/file/d/1KEx8N6EKtwaQVfa1JfgpXn1YqcUg-Zao/preview" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen muted loop title="DTRI Internship Experience Video 3"></iframe>
                                                 </div>
                                                 <div class="dtri-slide-overlay"></div>
                                             </div>
@@ -924,7 +981,7 @@
                                                 <li>Participated in the distribution of school supplies to the children of participating farmers.</li>
                                             </ul>
                                             <div class="video-container">
-                                                <iframe src="https://drive.google.com/file/d/1wdz0Z-V3PCRfmBZ18qk0il7N6-QuO2Pa/preview" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="SIGLAW 2024 Video"></iframe>
+                                                <iframe src="https://drive.google.com/file/d/1wdz0Z-V3PCRfmBZ18qk0il7N6-QuO2Pa/preview" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen muted loop title="SIGLAW 2024 Video"></iframe>
                                             </div>
                                             <p class="caption-text">Watch the official video from SIGLAW 2024.</p>
                                         </div>
@@ -946,6 +1003,44 @@
                                     <a href="https://drive.google.com/drive/folders/1D2B2aZ3FLX8yeICSyDJpShoZJBWv7U5f?usp=sharing" target="_blank" class="custom-button secondary" aria-label="Download CV">
                                         <span class="mr-2 fas fa-file-alt"></span> Download CV
                                     </a>
+                                </div>
+                            </section>
+
+                            <hr class="major" />
+
+                            <!-- Contact Section -->
+                            <section id="contact-section" class="scroll-reveal">
+                                <header class="main">
+                                    <h2 class="section-title">Get In Touch</h2>
+                                    <p class="section-subtitle">Feel free to reach out for collaborations, inquiries, or just to connect.</p>
+                                </header>
+                                <div class="max-w-4xl mx-auto card">
+                                    <div class="contact-grid">
+                                        <div class="contact-item">
+                                            <i class="icon solid fa-envelope"></i>
+                                            <div class="text">
+                                                Email: <a href="mailto:dzgdelmundo@gmail.com" aria-label="Email Daniel">dzgdelmundo@gmail.com</a>
+                                            </div>
+                                        </div>
+                                        <div class="contact-item">
+                                            <i class="icon solid fa-phone"></i>
+                                            <div class="text">
+                                                Phone: <a href="tel:+639182590198" aria-label="Call Daniel">+63 918 259 0198</a>
+                                            </div>
+                                        </div>
+                                        <div class="contact-item">
+                                            <i class="icon brands fa-linkedin-in"></i>
+                                            <div class="text">
+                                                LinkedIn: <a href="https://linkedin.com/in/dzgdelmundo/" target="_blank" aria-label="LinkedIn Profile">linkedin.com/in/dzgdelmundo/</a>
+                                            </div>
+                                        </div>
+                                        <div class="contact-item">
+                                            <i class="icon solid fa-home"></i>
+                                            <div class="text">
+                                                Location: Santa Cruz, Laguna, Philippines
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </section>
 
@@ -975,7 +1070,7 @@
                                         <li><a href="#interests">Areas of Interest</a></li> <!-- New Menu Item -->
 										<li><a href="#experience">Professional Experience</a></li>
 										<li><a href="#documents">Professional Documents</a></li>
-										<li><a href="#contact">Contact</a></li>
+										<li><a href="#contact-section">Contact</a></li>
 									</ul>
 								</nav>
 
@@ -1167,7 +1262,14 @@
                 // Initial display of the first slide and start slideshow
                 if (aboutSlides.length > 0) {
                     aboutSlides[0].classList.add('active');
-                    if (!aboutSlides[0].classList.contains('video-container')) { // Only start if first slide is not a video
+                    // If the first slide is a video, ensure it starts playing and the slideshow interval is cleared
+                    if (aboutSlides[0].classList.contains('video-container')) {
+                        const iframe = aboutSlides[0].querySelector('iframe');
+                        if (iframe && iframe.contentWindow && typeof iframe.contentWindow.postMessage === 'function') {
+                            iframe.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+                        }
+                        stopAboutSlideshow();
+                    } else {
                         startAboutSlideshow();
                     }
                 }
