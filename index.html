@@ -393,12 +393,21 @@
                 color: var(--text-medium);
                 border-bottom-color: rgba(224, 224, 224, 0.5);
             }
-            #sidebar #menu ul a:hover, #sidebar .contact a:hover { color: var(--primary-blue); }
-            #sidebar #menu ul a.active { color: var(--primary-blue); font-weight: 700; }
+            #sidebar #menu ul a:hover, #sidebar .contact a:hover { color: var(--primary-blue) !important; background: none !important; }
+            #sidebar #menu ul a.active { color: var(--primary-blue) !important; font-weight: 700; }
             #sidebar .icons li a { color: var(--text-medium); }
-            #sidebar .icons li a:hover, #header .icons li a:hover { color: var(--primary-blue); }
+            #sidebar .icons li a:hover, #header .icons li a:hover { color: var(--primary-blue) !important; }
             #menu ul a.opener:before, #menu ul span.opener:before { color: var(--text-medium); }
             #menu ul a.opener:hover:before, #menu ul a.active:before { color: var(--primary-blue); }
+            /* Remove any red border or background from sidebar */
+            #sidebar,
+            #sidebar .inner,
+            #sidebar header.major h2,
+            #sidebar h2 {
+                background: var(--bg-light-gray);
+                border-right: 1px solid var(--border-light);
+                color: var(--primary-blue);
+            }
             #sidebar footer {
                 margin-top: auto; /* Pushes footer to bottom */
                 border-top: 2px solid var(--border-light);
@@ -531,6 +540,24 @@
             .certifications-list .certification-item .details .cert-info {
                 font-size: 0.9em;
                 color: var(--text-medium);
+            }
+
+            /* Example CSS for ID section background */
+            .id-section {
+              position: relative;
+              background: url('bg.jpg') center/cover no-repeat;
+            }
+            .id-section::before {
+              content: '';
+              position: absolute;
+              inset: 0;
+              background: rgba(0,0,0,0.5); /* Adjust opacity for contrast */
+              z-index: 1;
+            }
+            .id-content {
+              position: relative;
+              z-index: 2;
+              color: #fff;
             }
         </style>
 	</head>
@@ -881,7 +908,7 @@
                                         </div>
                                         <div class="card">
                                             <h3 class="text-xl font-bold text-[var(--primary-blue)]">Culture Section Staff & Script Writer</h3>
-                                            <p class="font-semibold text-[var(--primary-blue)]">UPLB Perspective</p>
+                                            <p class="font-semibold text-[var,--primary-blue)]">UPLB Perspective</p>
                                             <p class="text-sm text-[var(--text-medium)] mb-3">Oct 2021 - Aug 2023</p>
                                             <ul class="list-disc list-inside text-[var(--text-dark)] space-y-1">
                                                 <li>Contributed to campus journalism through writing and content creation for cultural features.</li>
@@ -932,6 +959,57 @@
                                     <a href="https://drive.google.com/drive/folders/1D2B2aZ3FLX8yeICSyDJpShoZJBWv7U5f?usp=sharing" target="_blank" class="custom-button secondary" aria-label="Download CV">
                                         <span class="mr-2 fas fa-file-alt"></span> Download CV
                                     </a>
+                                </div>
+                            </section>
+
+                            <!-- Gabay Section -->
+                            <section id="gabay" class="scroll-reveal">
+                                <header class="main">
+                                    <h2 class="section-title">Gabay Volunteer Work</h2>
+                                    <p class="section-subtitle">Empowering communities through education and outreach.</p>
+                                </header>
+                                <div class="max-w-4xl mx-auto">
+                                    <div class="card text-left mb-8">
+                                        <h3 class="text-xl font-bold text-[var(--primary-blue)]">Gabay Volunteer Experience</h3>
+                                        <p class="text-[var(--text-dark)] mb-4">
+                                            As a volunteer for the UPLB GABAY Volunteer Corps, I participated in various outreach programs aimed at providing educational support and resources to underprivileged communities. This experience honed my project management and communication skills while deepening my commitment to social responsibility.
+                                        </p>
+                                        <div class="slideshow-container">
+                                            <img class="about-slide active" src="gabay.jpeg" alt="Gabay outreach program, group photo">
+                                            <img class="about-slide" src="gabay.jpeg" alt="Gabay outreach program, distributing school supplies">
+                                            <img class="about-slide" src="gabay.jpeg" alt="Group photo with volunteers and community members">
+                                            <div class="about-slide-overlay"></div>
+                                        </div>
+                                        <p class="caption-text">Moments from my volunteer work with Gabay.</p>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <hr class="major" />
+
+                            <!-- Research Section -->
+                            <section id="research-photos" class="scroll-reveal">
+                                <header class="main">
+                                    <h2 class="section-title">Research Photography</h2>
+                                    <p class="section-subtitle">Capturing the essence of scientific inquiry and discovery.</p>
+                                </header>
+                                <div class="max-w-4xl mx-auto">
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                        <div class="card">
+                                            <img src="research1.jpeg" alt="Research 1" class="w-full h-48 object-cover rounded-tl-0.75em rounded-tr-0.75em">
+                                            <div class="p-4">
+                                                <h3 class="text-lg font-semibold text-[var(--primary-blue)] mb-2">Research Image 1</h3>
+                                                <p class="text-[var(--text-dark)]">Description of research image 1, highlighting the key aspects and findings.</p>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <img src="research2.jpeg" alt="Research 2" class="w-full h-48 object-cover rounded-tl-0.75em rounded-tr-0.75em">
+                                            <div class="p-4">
+                                                <h3 class="text-lg font-semibold text-[var(--primary-blue)] mb-2">Research Image 2</h3>
+                                                <p class="text-[var(--text-dark)]">Description of research image 2, emphasizing the significance and impact of the research.</p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </section>
 
@@ -1098,8 +1176,7 @@
                                 color: 'var(--primary-blue)'
                             }
                         }
-                    }
-                });
+                    });
 
                 // Slideshow logic for About Me section
                 let aboutSlideIndex = 0;
